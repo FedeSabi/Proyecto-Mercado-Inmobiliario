@@ -144,7 +144,7 @@ const Footer = () => {
           </div>
         </div>
       </section>
-      <div className="flex flex-row justify-around">
+      <div className="flex flex-row justify-around flex-wrap">
         <div className="flex flex-col gap-1">
           <h1 className="mb-3 text-xl">
             <b>Imoveis</b>
