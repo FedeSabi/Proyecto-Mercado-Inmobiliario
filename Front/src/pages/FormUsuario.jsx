@@ -28,7 +28,7 @@ const FormUsuario = () => {
                 <input type="text" placeholder="State / Province" className="border p-2 rounded w-full" />
                 <input type="text" placeholder="ZIP / Postal code" className="border p-2 rounded w-full" />
               </div>
-              <button type="button" id="theme-toggle" className="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 focus:outline-none transition-colors">
+              <button type="button" id="theme-toggle" className="px-4 py-2 rounded bg-green-900 text-white hover:bg-green-500 focus:outline-none transition-colors">
                 Toggle Theme
               </button>
             </form>
