@@ -81,7 +81,7 @@ const Footer = () => {
                   src={imagen3}
                   className="w-full z-0  h-full    object-fill example "
                 />
-              </div>
+              </div> 
             </a>
             <a href="#" className=" shadow-2xl relative ">
               <div className="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
