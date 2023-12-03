@@ -13,29 +13,29 @@ const FormLogin = () => {
             className="w-6 h-6"
             alt=""
           />{" "}
-          <span>Login with Google</span>
+          <span>Login con Google</span>
         </button>
       </div>
       <form action="" className="my-10">
         <div className="flex flex-col space-y-5">
           <label htmlFor="email">
-            <p className="font-medium text-green-700 pb-2">Email address</p>
+            <p className="font-medium text-green-700 pb-2">Ingrese su Email</p>
             <input
               id="email"
               name="email"
               type="email"
               className="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-green-500 hover:shadow"
-              placeholder="Enter email address"
+              placeholder="Ingrese su Email"
             />
           </label>
           <label htmlFor="password">
-            <p className="font-medium text-green-700 pb-2">Password</p>
+            <p className="font-medium text-green-700 pb-2">Contraseña</p>
             <input
               id="password"
               name="password"
               type="password"
               className="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-green-500 hover:shadow"
-              placeholder="Enter your password"
+              placeholder="Ingrese su Contraseña"
             />
           </label>
           <div className="flex flex-row justify-between">
@@ -46,12 +46,12 @@ const FormLogin = () => {
                   id="remember"
                   className="w-4 h-4 border-slate-200 focus:bg-green-900"
                 />
-                Remember me
+                Recordar Contraseña
               </label>
             </div>
             <div>
               <a href="#" className="font-medium text-green-500">
-                Forgot Password?
+                Olvide Contraseña?
               </a>
             </div>
           </div>
@@ -73,12 +73,12 @@ const FormLogin = () => {
             <span>Login</span>
           </button>
           <p className="text-center">
-            Not registered yet?{" "}
+            Todavia no estas Registrado?{" "}
             <a
               href="#"
               className="text-green-900 font-medium inline-flex space-x-1 items-center"
             >
-              <span>Register now </span>
+              <span>Registrese Ahora </span>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
