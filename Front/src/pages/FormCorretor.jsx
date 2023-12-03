@@ -19,7 +19,7 @@ const FormCorretor = () => {
             <input type="text" placeholder="web" className="border p-2 rounded w-full border-green-500"/>
           </div>
           <button type="button" id="theme-toggle" className="px-4 py-2 rounded bg-green-900 text-white hover:bg-green-500 focus:outline-none transition-colors">
-            Toggle Theme
+            Enviar
           </button>
         </form>
       </div>

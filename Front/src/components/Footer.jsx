@@ -3,7 +3,7 @@ import { BsFacebook, BsWhatsapp, BsInstagram } from "react-icons/bs";
 const Footer = () => {
   return (
     <>
-      <div className="flex flex-row justify-around flex-wrap">
+      <div className="flex flex-row justify-around flex-wrap mt-5">
         <div className="flex flex-col gap-1">
           <h1 className="mb-3 text-xl">
             <b>Imoveis</b>
