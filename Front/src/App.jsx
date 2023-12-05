@@ -4,6 +4,7 @@ import FormCorretor from './pages/FormCorretor.jsx';
 import FormLogin from "./pages/FormLogin.jsx";
 import Home from "./pages/Home.jsx";
 import Footer from "./components/Footer.jsx";
+import CardsPropiedades from "./pages/CardsPropiedades.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/FormCorretor" element={<FormCorretor />} />
           <Route path="/FormLogin" element={<FormLogin />} />
+          <Route path="/CardsPropiedades" element={<CardsPropiedades />} />
         </Routes>
         <Footer />
       </Router>
