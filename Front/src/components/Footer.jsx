@@ -31,7 +31,7 @@ const Footer = () => {
           <p href="#">
             <b>Segue-Nos</b>
           </p>
-          <div className="flex mt-3 gap-3 mb-4 text-lime-900 text-2xl">
+          <div className="flex mt-3 gap-3 mb-4 text-orange-500 text-2xl">
             <a href="#">
               <BsFacebook />
             </a>
