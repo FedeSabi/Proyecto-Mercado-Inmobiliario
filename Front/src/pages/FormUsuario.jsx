@@ -55,16 +55,7 @@ const FormUsuario = () => {
                   className="border p-2 rounded w-full border-orange-600"
                 />
               </div>
-              <div className="mb-3">
-                <label htmlFor="remember" className="">
-                  <input
-                    type="checkbox"
-                    id="remember"
-                    className="w-4 h-4 border-slate-200 checked:bg-orange-600"
-                  />
-                  Autorizo a mostrar sus datos de contaro en las redes
-                </label>
-              </div>
+              
               <button
                 type="button"
                 id="theme-toggle"
