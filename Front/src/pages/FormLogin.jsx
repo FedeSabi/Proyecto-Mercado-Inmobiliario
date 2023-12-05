@@ -1,13 +1,13 @@
 const FormLogin = () => {
   return (
-    <div className="max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-green-300">
+    <div className="max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-orange-300">
       <h1 className="text-4xl font-medium mb-3">Login</h1>
-      <p className="text-green-500">
+      <p className="text-orange-500">
         Hola, Bienvenido a Mercado Inmobiliario 👋
       </p>
 
       <div className="my-5">
-        <button className="w-full text-center py-3 my-3 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg text-green-700 hover:border-green-400 hover:text-green-900 hover:shadow transition duration-150">
+        <button className="w-full text-center py-3 my-3 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg text-black-700 hover:border-orange-400 hover:text-orange-700 hover:shadow transition duration-150">
           <img
             src="https://www.svgrepo.com/show/355037/google.svg"
             className="w-6 h-6"
@@ -19,22 +19,22 @@ const FormLogin = () => {
       <form action="" className="my-10">
         <div className="flex flex-col space-y-5">
           <label htmlFor="email">
-            <p className="font-medium text-green-700 pb-2">Ingrese su Email</p>
+            <p className="font-medium text-orange-700 pb-2">Ingrese su Email</p>
             <input
               id="email"
               name="email"
               type="email"
-              className="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-green-500 hover:shadow"
+              className="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-orange-500 hover:shadow"
               placeholder="Ingrese su Email"
             />
           </label>
           <label htmlFor="password">
-            <p className="font-medium text-green-700 pb-2">Contraseña</p>
+            <p className="font-medium text-orange-700 pb-2">Contraseña</p>
             <input
               id="password"
               name="password"
               type="password"
-              className="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-green-500 hover:shadow"
+              className="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-orange-500 hover:shadow"
               placeholder="Ingrese su Contraseña"
             />
           </label>
@@ -44,18 +44,18 @@ const FormLogin = () => {
                 <input
                   type="checkbox"
                   id="remember"
-                  className="w-4 h-4 border-slate-200 focus:bg-green-900"
+                  className="w-4 h-4 border-slate-200 focus:bg-orange-700"
                 />
                 Recordar Contraseña
               </label>
             </div>
             <div>
-              <a href="#" className="font-medium text-green-500">
+              <a href="#" className="font-medium text-orange-500">
                 Olvide Contraseña?
               </a>
             </div>
           </div>
-          <button className="w-full py-3 font-medium text-white bg-green-900 hover:bg-green-500 rounded-lg border-green-500 hover:shadow inline-flex space-x-2 items-center justify-center">
+          <button className="w-full py-3 font-medium text-white bg-orange-600 hover:bg-orange-400 rounded-lg border-orange-400 hover:shadow inline-flex space-x-2 items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -76,7 +76,7 @@ const FormLogin = () => {
             Todavia no estas Registrado?{" "}
             <a
               href="#"
-              className="text-green-900 font-medium inline-flex space-x-1 items-center"
+              className="text-orange-700 font-medium inline-flex space-x-1 items-center"
             >
               <span>Registrese Ahora </span>
               <span>
