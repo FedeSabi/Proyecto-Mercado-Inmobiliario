@@ -7,18 +7,18 @@ const FormUsuario = () => {
             <h1 className="text-xl font-semibold mb-4 text-black-700 dark:text-white">
               <b>Si no esta Registrado:</b> registrarse
             </h1>
-            <p className="text-black-700 dark:text-orange-700 mb-6">
-              Utiliza una dirección permanente donde puedas recibir correo.
-            </p>
-            <form>
-              <div className="bg-white grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <select className="border p-2 rounded w-full border-orange-600">
-                  <option value="">Selecciona una opción</option>
+                  <select className="bg-white border p-2 rounded w-[49%] border-orange-600 mb-4">
                   <option value="opcion1">Persona</option>
                   <option value="opcion2">Inmobiliaria</option>
                   <option value="opcion3">Constructora</option>
                 </select>
-
+            <p className="text-black-700 dark:text-orange-700 mb-6">
+              Utiliza una dirección permanente donde puedas recibir correo.
+            </p>
+      
+            <form>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            
                 <input
                   type="text"
                   placeholder="Nombre"
@@ -60,7 +60,7 @@ const FormUsuario = () => {
                   <input
                     type="checkbox"
                     id="remember"
-                    className="w-4 h-4 border-slate-200 focus:bg-orange-600"
+                    className="w-4 h-4 border-slate-200 checked:bg-orange-600"
                   />
                   Autorizo a mostrar sus datos de contaro en las redes
                 </label>
