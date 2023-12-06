@@ -12,7 +12,7 @@ const FormUsuario = () => {
                   <option value="opcion2">Inmobiliaria</option>
                   <option value="opcion3">Constructora</option>
                 </select>
-            <p className="text-black-700 dark:text-orange-700 mb-6">
+            <p className="text-black-700 dark:text-orange-700 mb-6 focus:outline-none">
               Utiliza una dirección permanente donde puedas recibir correo.
             </p>
       
@@ -22,37 +22,37 @@ const FormUsuario = () => {
                 <input
                   type="text"
                   placeholder="Nombre"
-                  className="border p-2 rounded w-full border-orange-600"
+                  className="border p-2 rounded w-full border-orange-600 focus:outline-none"
                 />
                 <input
                   type="text"
                   placeholder="Apellido"
-                  className="border p-2 rounded w-full border-orange-600"
+                  className="border p-2 rounded w-full border-orange-600 focus:outline-none"
                 />
                 <input
                   type="number"
                   placeholder="WhatsApp"
-                  className="border p-2 rounded w-full border-orange-600"
+                  className="border p-2 rounded w-full border-orange-600 focus:outline-none"
                 />
                 <input
                   type="email"
                   placeholder="Email"
-                  className="border p-2 rounded w-full border-orange-600"
+                  className="border p-2 rounded w-full border-orange-600 focus:outline-none"
                 />
                 <input
                   type="password"
                   placeholder="Contraseña"
-                  className="border p-2 rounded w-full border-orange-600"
+                  className="border p-2 rounded w-full border-orange-600 focus:outline-none"
                 />
                 <input
                   type="password"
                   placeholder="Confirmar Contraseña"
-                  className="border p-2 rounded w-full border-orange-600"
+                  className="border p-2 rounded w-full border-orange-600 focus:outline-none"
                 />
                 <input
                   type="number"
                   placeholder="Telefono"
-                  className="border p-2 rounded w-full border-orange-600"
+                  className="border p-2 rounded w-full border-orange-600 focus:outline-none"
                 />
               </div>
               

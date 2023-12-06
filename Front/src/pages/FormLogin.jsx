@@ -44,7 +44,7 @@ const FormLogin = () => {
                 <input
                   type="checkbox"
                   id="remember"
-                  className="w-4 h-4 border-slate-200 focus:bg-orange-700"
+                  className="w-4 h-4 border-slate-200 focus:ring-orange-700"
                 />
                 Recordar Contraseña
               </label>

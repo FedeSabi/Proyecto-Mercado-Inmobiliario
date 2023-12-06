@@ -1,6 +1,11 @@
 const CardsPropiedades = () => {
   return (
-    <div className="flex flex-row">
+    <>
+    <div>
+        <h1 className="my-4 mx-4 text-left text-3xl"><b>Resultados de la busqueda</b></h1>
+    </div>
+    
+    <div className="flex flex-row m-4">
 
 <div className="relative mx-auto w-full max-w-sm pt-6">
   <a href="#" className="relative inline-block w-full transform transition-transform duration-300 ease-in-out">
@@ -223,6 +228,7 @@ const CardsPropiedades = () => {
   </a>
 </div>
     </div>
+    </>
   )
 }
 export default CardsPropiedades

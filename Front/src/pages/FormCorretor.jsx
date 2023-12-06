@@ -15,59 +15,59 @@ const FormCorretor = () => {
               <input
                 type="text"
                 placeholder="Instagram"
-                className="border p-2 rounded w-full border-orange-600"
+                className="border p-2 rounded w-full border-orange-600 focus:outline-none"
               />
               <input
                 type="text"
                 placeholder="Facebook"
-                className="border p-2 rounded w-full border-orange-600" 
+                className="border p-2 rounded w-full border-orange-600 focus:outline-none" 
               />
               <input
                 type="text"
                 placeholder="CNPJ"
-                className="border p-2 rounded w-full border-orange-600"
+                className="border p-2 rounded w-full border-orange-600 focus:outline-none"
               />
               <input
                 type="text"
                 placeholder="Creci"
-                className="border p-2 rounded w-full border-orange-600"
+                className="border p-2 rounded w-full border-orange-600 focus:outline-none"
               />
               <input
                 type="text"
                 placeholder="Ciudad"
-                className="border p-2 rounded w-full border-orange-600"
+                className="border p-2 rounded w-full border-orange-600 focus:outline-none"
               />
               <input
                 type="text"
                 placeholder="Endereco"
-                className="border p-2 rounded w-full border-orange-600"
+                className="border p-2 rounded w-full border-orange-600 focus:outline-none"
               />
               <input
                 type="text"
                 placeholder="Descripcion"
-                className="border p-2 rounded w-full border-orange-600"
+                className="border p-2 rounded w-full border-orange-600 focus:outline-none"
               />
               <input
-                type="number"
+                type="phone"
                 placeholder="Telefono"
-                className="border p-2 rounded w-full border-orange-600"
+                className="border p-2 rounded w-full border-orange-600 focus:outline-none"
               />
               <input
                 type="text"
                 placeholder="Inmobiliaria"
-                className="border p-2 rounded w-full border-orange-600"
+                className="border p-2 rounded w-full border-orange-600 focus:outline-none"
               />
               <input
                 type="text"
                 placeholder="web"
-                className="border p-2 rounded w-full border-orange-600"
+                className="border p-2 rounded w-full border-orange-600 focus:outline-none"
               />
               <div>
                 <p className="mb-3 text-black-700 text-md">Subir Imagenes</p>
                 <input
                   type="file"
                   placeholder="subir imagenes"
-                  className="border p-2 rounded w-full border-orange-600"
+                  className="border p-2 rounded w-full border-orange-600 focus:outline-none"
                 />
               </div>
             </div>
@@ -76,7 +76,7 @@ const FormCorretor = () => {
                 <input
                   type="checkbox"
                   id="remember"
-                  className="w-4 h-4 border-slate-200 focus:bg-orange-600"
+                  className="w-4 h-4 border-slate-200 focus:bg-orange-600 "
                 />
                 Autorizo a mostrar sus datos de contaro en las redes
               </label>
@@ -95,3 +95,4 @@ const FormCorretor = () => {
   );
 };
 export default FormCorretor;
+
