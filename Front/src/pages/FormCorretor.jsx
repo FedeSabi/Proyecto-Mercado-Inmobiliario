@@ -76,7 +76,7 @@ const FormCorretor = () => {
                 <input
                   type="checkbox"
                   id="remember"
-                  className="w-4 h-4 border-slate-200 focus:bg-orange-600 "
+                  className="w-4 h-4 border-slate-200 accent-orange-600 "
                 />
                 Autorizo a mostrar sus datos de contaro en las redes
               </label>
