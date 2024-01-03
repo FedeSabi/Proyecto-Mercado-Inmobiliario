@@ -61,11 +61,11 @@ const InmuebleFormPersona = () => {
           />
         </div>
         <div className="grid grid-cols-1">
-          <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Input 2</label>
+          <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Garage</label>
           <select className="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
+          <option> 1</option>
+          <option> 2</option>
+          <option>no tiene</option>
         </select>
         </div>
       </div>
