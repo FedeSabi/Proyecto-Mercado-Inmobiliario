@@ -6,6 +6,7 @@ import Home from "./pages/Home.jsx";
 import Footer from "./components/Footer.jsx";
 import CardsPropiedades from "./pages/CardsPropiedades.jsx";
 import FormUsuario from "./pages/FormUsuario.jsx";
+import InmuebleFormPersona from "./pages/InmuebleFormPersona.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/FormUsuario" element={<FormUsuario />} />
           <Route path="/FormCorretor" element={<FormCorretor />} />
           <Route path="/CardsPropiedades" element={<CardsPropiedades />} />
+          <Route path="/InmuebleFormPersona" element={<InmuebleFormPersona />} />
         </Routes>
         <Footer />
       </Router>
