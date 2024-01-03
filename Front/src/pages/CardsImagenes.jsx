@@ -7,8 +7,8 @@ import imagen6 from "../assets/img/yaopey-1.jpg";
 
 const CardsImagenes = () => {
   return (
-   <>
-         <section className="py-10 bg-w m-4 sm:py-16 lg:py-24 z-40 relative">
+    <>
+      <section className="py-10 bg-w m-4 sm:py-16 lg:py-24 z-40 relative">
         <div className="container mx-auto">
           <h2 className="text-3xl font-light   text-black sm:text-4xl lg:text-5xl">
             <span className="block w-full font-light text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-500 lg:inline">
@@ -80,7 +80,7 @@ const CardsImagenes = () => {
                   src={imagen3}
                   className="w-full z-0  h-full    object-fill example "
                 />
-              </div> 
+              </div>
             </a>
             <a href="#" className=" shadow-2xl relative ">
               <div className="  h-full relative shadow-2xl shadow-orange-300 overflow-hidden group ">
@@ -143,7 +143,7 @@ const CardsImagenes = () => {
           </div>
         </div>
       </section>
-   </>
-  )
-}
-export default CardsImagenes
+    </>
+  );
+};
+export default CardsImagenes;
