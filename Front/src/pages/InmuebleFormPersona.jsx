@@ -1,10 +1,10 @@
 const InmuebleFormPersona = () => {
   return (
-    <div className="flex h-screen items-center justify-center mt-40 mb-64">
+    <div className="flex h-screen items-center justify-center mt-44 mb-64">
       <div className="grid bg-white rounded-lg shadow-xl w-11/12 md:w-9/12 lg:w-1/2">
         <div className="flex justify-center">
           <div className="flex">
-            <h1 className="text-gray-600 font-bold mt-7 md:text-2xl text-xl">
+            <h1 className="text-gray-600 font-bold mt-7 md:text-2xl text-xl ">
               PUBLICAR UNA PROPIEDAD
             </h1>
           </div>
@@ -20,7 +20,6 @@ const InmuebleFormPersona = () => {
             placeholder="Titulo"
           />
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 mt-5 mx-7">
           <div className="grid grid-cols-1">
             <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">
@@ -94,69 +93,58 @@ const InmuebleFormPersona = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 mt-5 mx-7">
-          <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">
-            Selection
-          </label>
-          <select className="py-2 px-3 rounded-lg border-2 border-orange-300 mt-1 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent">
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-          </select>
-          
+        <div className="grid grid-cols-1 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 justify-center">
+          <div>
+            <label htmlFor="lanzamientos" className="">
+              <input
+                type="checkbox"
+                id="lanzamientos"
+                className="w-4 h-4 border-slate-200 focus:bg-orange-600  accent-orange-600 mt-4 "
+              />
+              Lanzamientos
+            </label>
+          </div>
+          <div>
+            <label htmlFor="nuevos" className="">
+              <input
+                type="checkbox"
+                id="nuevos"
+                className="w-4 h-4 border-slate-200 focus:bg-orange-600  accent-orange-600 mt-4"
+              />
+              Amuebladas
+            </label>
+          </div>
+          <div>
+            <label htmlFor="alquilados" className="">
+              <input
+                type="checkbox"
+                id="alquilados"
+                className="w-4 h-4 border-slate-200 focus:bg-orange-600  accent-orange-600 mt-4"
+              />
+              Nuevos
+            </label>
+          </div>
+          <div>
+            <label htmlFor="remember1" className="">
+              <input
+                type="checkbox"
+                id="remember1"
+                className="w-4 h-4 border-slate-200 focus:bg-orange-600  accent-orange-600 mt-4"
+              />
+              Calidad Superior
+            </label>
+          </div>
+          <div>
+            <label htmlFor="remember2" className="">
+              <input
+                type="checkbox"
+                id="remember2"
+                className="w-4 h-4 border-slate-200 focus:bg-orange-600  accent-orange-600 mt-4"
+              />
+              Financiado
+            </label>
+          </div>
         </div>
-        <div className="grid grid-cols-1 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 justify-start">
-  <div>
-    <label htmlFor="lanzamientos" className="">
-      <input
-        type="checkbox"
-        id="lanzamientos"
-        className="w-4 h-4 border-slate-200 focus:bg-indigo-600 mt-4 "
-      />
-      Lanzamientos
-    </label>
-  </div>
-  <div>
-    <label htmlFor="nuevos" className="">
-      <input
-        type="checkbox"
-        id="nuevos"
-        className="w-4 h-4 border-slate-200 focus:bg-indigo-600 mt-4"
-      />
-      Nuevos
-    </label>
-  </div>
-  <div>
-    <label htmlFor="alquilados" className="">
-      <input
-        type="checkbox"
-        id="alquilados"
-        className="w-4 h-4 border-slate-200 focus:bg-orange-600 mt-4"
-      />
-      Alquilados
-    </label>
-  </div>
-  <div>
-    <label htmlFor="remember1" className="">
-      <input
-        type="checkbox"
-        id="remember1"
-        className="w-4 h-4 border-slate-200 focus:bg-indigo-600 mt-4"
-      />
-      Alto Padrao
-    </label>
-  </div>
-  <div>
-    <label htmlFor="remember2" className="">
-      <input
-        type="checkbox"
-        id="remember2"
-        className="w-4 h-4 border-slate-200 focus:bg-indigo-600 mt-4"
-      />
-      Financiado
-    </label>
-  </div>
-</div>
 
         <div className="grid grid-cols-1 mt-5 mx-7">
           <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">
