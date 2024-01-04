@@ -1,11 +1,11 @@
 const InmuebleFormPersona = () => {
   return (
-    <div className="flex h-screen items-center justify-center mt-44 mb-64">
+    <div className="flex h-full items-center justify-center mt-4 mb-24">
       <div className="grid bg-white rounded-lg shadow-xl w-11/12 md:w-9/12 lg:w-1/2">
         <div className="flex justify-center">
           <div className="flex">
             <h1 className="text-gray-600 font-bold mt-7 md:text-2xl text-xl ">
-              PUBLICAR UNA PROPIEDAD
+              Publicar Una Propiedad (propietarios)
             </h1>
           </div>
         </div>
@@ -92,7 +92,34 @@ const InmuebleFormPersona = () => {
             </select>
           </div>
         </div>
-
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 mt-5 mx-7">
+      <div className="grid grid-cols-1">
+        <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Precio u$a</label>
+        <input
+          className="py-2 px-3 rounded-lg border-2 border-orange-300 mt-1 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+          type="text"
+          placeholder="Precio u$a"
+        />
+      </div>
+      <div className="grid grid-cols-1">
+        <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Condominio u$a</label>
+        <input
+          className="py-2 px-3 rounded-lg border-2 border-orange-300 mt-1 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+          type="text"
+          placeholder="Condominio u$a"
+        />
+      </div>
+      <div className="grid grid-cols-1">
+        <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Impuestos u$a</label>
+        <input
+          className="py-2 px-3 rounded-lg border-2 border-orange-300 mt-1 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+          type="text"
+          placeholder="Impuestos u$a"
+        />
+      </div>
+    </div>
+        {/*empieza checkbox */}
+        
         <div className="grid grid-cols-1 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 justify-center">
           <div>
             <label htmlFor="lanzamientos" className="">
@@ -145,54 +172,100 @@ const InmuebleFormPersona = () => {
             </label>
           </div>
         </div>
-
+        {/*area caracteristicas de la propiedad */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 mt-5 mx-7">
+      <div className="grid grid-cols-1">
+        <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Area Total m2</label>
+        <input
+          className="py-2 px-3 rounded-lg border-2 border-orange-300 mt-1 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+          type="text"
+          placeholder="Area Total m2"
+        />
+      </div>
+      <div className="grid grid-cols-1">
+        <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Antiguedad Años</label>
+        <select className="py-2 px-3 rounded-lg border-2 border-orange-300 mt-1 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+              <option> menos de 5 años</option>
+              <option> menos de 10 años</option>
+              <option>mas de 10 años</option>
+            </select>
+      </div>
+      <div className="grid grid-cols-1">
+        <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">caracteristicas adicionales</label>
+        <select className="py-2 px-3 rounded-lg border-2 border-orange-300 mt-1 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent">
+              <option> 1</option>
+              <option> 2</option>
+              <option>no tiene</option>
+            </select>
+      </div>
+    </div>
         <div className="grid grid-cols-1 mt-5 mx-7">
           <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">
-            Another Input
+            descripcion adicional
           </label>
-          <input
+          <textarea
             className="py-2 px-3 rounded-lg border-2 border-orange-300 mt-1 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent"
             type="text"
-            placeholder="Another Input"
+            placeholder="descripcion adicional"
           />
         </div>
-
-        <div className="grid grid-cols-1 mt-5 mx-7">
-          <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold mb-1">
-            Upload Photo
-          </label>
-          <div className="flex items-center justify-center w-full">
-            <label className="flex flex-col border-4 border-dashed w-full h-32 hover:bg-gray-100 hover:border-orange-300 group">
-              <div className="flex flex-col items-center justify-center pt-7">
-                <svg
-                  className="w-10 h-10 text-orange-400 group-hover:text-orange-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  ></path>
-                </svg>
-                <p className="lowercase text-sm text-gray-400 group-hover:text-orange-600 pt-1 tracking-wider">
-                  Select a photo
-                </p>
-              </div>
-              <input type="file" className="hidden" />
-            </label>
-          </div>
-        </div>
-
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 mt-5 mx-7">
+      <div className="grid grid-cols-1">
+        <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">foto logo</label>
+        <input
+          className="py-2 px-3 rounded-lg border-2 border-orange-300 mt-1 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+          type="file"
+          placeholder="Area Total m2"
+        />
+      </div>
+      <div className="grid grid-cols-1">
+        <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Foto Destacada</label>
+        <input
+          className="py-2 px-3 rounded-lg border-2 border-orange-300 mt-1 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+          type="file"
+          placeholder="Area Total m2"
+        />
+      </div>
+      <div className="grid grid-cols-1">
+        <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Galeria de Fotos</label>
+        <input
+          className="py-2 px-3 rounded-lg border-2 border-orange-300 mt-1 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+          type="file" 
+        />
+      </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 mt-5 mx-7">
+      <div className="grid grid-cols-1">
+        <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Video Url</label>
+        <input
+          className="py-2 px-3 rounded-lg border-2 border-orange-300 mt-1 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+          type="text"
+          placeholder="video URL"
+        />
+      </div>
+      <div className="grid grid-cols-1">
+        <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Web Inmueble</label>
+        <input
+          className="py-2 px-3 rounded-lg border-2 border-orange-300 mt-1 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+          type="text"
+          placeholder="Web Inmueble"
+        />
+      </div>
+      <div className="grid grid-cols-1">
+        <label className="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Redes Sociales</label>
+        <input
+          className="py-2 px-3 rounded-lg border-2 border-orange-300 mt-1 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent"
+          type="text"
+          placeholder="Redes Sociales"
+        />
+      </div>
+    </div>
         <div className="flex items-center justify-center md:gap-8 gap-4 pt-5 pb-5">
           <button className="w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2">
             Cancel
           </button>
           <button className="w-auto bg-orange-500 hover:bg-orange-700 rounded-lg shadow-xl font-medium text-white px-4 py-2">
-            Create
+            Publicar
           </button>
         </div>
       </div>
