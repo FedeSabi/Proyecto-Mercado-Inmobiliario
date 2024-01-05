@@ -7,6 +7,7 @@ import Footer from "./components/Footer.jsx";
 import CardsPropiedades from "./pages/CardsPropiedades.jsx";
 import FormUsuario from "./pages/FormUsuario.jsx";
 import InmuebleFormPersona from "./pages/InmuebleFormPersona.jsx";
+import FormBusquedaUser from "./pages/FormBusquedaUser.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/FormCorretor" element={<FormCorretor />} />
           <Route path="/CardsPropiedades" element={<CardsPropiedades />} />
           <Route path="/InmuebleFormPersona" element={<InmuebleFormPersona />} />
+          <Route path="/FormBusquedaUser" element={<FormBusquedaUser />} />
         </Routes>
         <Footer />
       </Router>
