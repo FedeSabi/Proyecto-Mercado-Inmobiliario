@@ -202,7 +202,7 @@ const FormBusquedaUser = () => {
             placeholder="descripcion adicional"
           />
         </div>
-        <div className="grid grid-cols-1 p-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-2 justify-center">
+        <div className="p-6">
           <div>
             <label htmlFor="lanzamientos" className="">
               <input
