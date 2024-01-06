@@ -5,6 +5,7 @@ import { MdRealEstateAgent } from "react-icons/md";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 
+
 const Navbar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
 
@@ -13,10 +14,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className='flex flex-wrap bg-cover bg-center w-screen h-screen' style={{ backgroundImage: `url(${img_1})` }}>
-      <div className="flex flex-wrap place-items-start ">
-        <section className="relative mx-auto">
-          <nav className={`flex justify-between text-white bg-gray-900 bg-opacity-30 w-screen p-4 ${menuVisible ? 'flex-col' : ''}`}>
+    <div className='flex flex-wrap bg-cover bg-center w-screen h-screen ' style={{ backgroundImage: `url(${img_1})` }}>
+    <div className="flex flex-wrap place-items-start ">
+      <section className="relative mx-auto section-container"> {/* Nueva clase section-container */}
+        <nav className={`flex justify-between text-white bg-gray-900 bg-opacity-30 w-screen p-4 z-50 lg:fixed  ${menuVisible ? 'flex-col' : ''}`}>
             <div className="px-5 xl:px-12 py-2 flex w-full items-center">
               <a className="text-3xl font-bold font-heading" href="#">
                 <p className="text-orange-500">Mercado</p>
@@ -64,61 +65,129 @@ const Navbar = () => {
             </ul>
           </nav>
 
-          <div className='flex flex-wrap items-end justify-center min-h-[50vh] bg-opacity-10'>
-            <div className='break-inside relative overflow-hidden flex flex-col justify-between space-y-3 text-sm max-w-full md:max-w-[45rem]  h-[21vh] rounded-[10px] p-4 mb-4 mr-[10px] ml-[10px] bg-white text-black dark:bg-slate-800 dark:text-white w-full md:w-[calc(50% - 1rem)] lg:w-[calc(33.33% - 1rem)]'>
-              <div className='flex flex-row items-center space-x-3'>
-                <div className='flex flex-none items-center justify-center w-20 h-20 rounded-full bg-orange-500 text-white' style={{ transform: 'rotate(-13deg)' }}>
-                  <GiNotebook size={60} style={{ marginRight: '5px' }} />
-                </div>
-                <span className='text-xl font-medium'>Solicitar Inmueble</span>
-              </div>
-              <div> Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod.</div>
-              <div className='flex justify-end items-center'>
-                <button className='flex items-center justify-center text-xs font-medium rounded-full px-4 py-1 space-x-1 border-2 border-none bg-white hover:bg-orange-500 hover:text-white text-orange-500 dark:bg-slate-800 dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'>
-                  <span className="text-xl">Solicitar</span>
-                  <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
-                    <path d='M5 12h13M12 5l7 7-7 7' />
-                  </svg>
-                </button>
-              </div>
+          <div className='flex flex-col md:flex-row items-center justify-center min-h-[50vh] mt-[20vh]'>
+  <div className='md:w-[40vw]  h-[20vh] mb-4 md:mb-0 md:mr-4 md:ml-4 bg-white flex items-center'>
+    <div className='flex items-center justify-center w-16 h-16 md:w-24 md:h-24 rounded-full bg-orange-500 text-white mb-4 ml-[20px]'>
+      <GiNotebook size={120} />
+    </div>
+    <div className='flex flex-col justify-around w-[80%] h-[70%]'>
+      <span className='text-lg font-medium mb-2 ml-[20px]'>Solicitar Inmueble</span>
+      <p className='text-sm mb-4 ml-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+      <div className='flex justify-end items-center'>
+        <button className='btn block w-[40%] md:w-[27%] h-[2rem]  rounded-full ml-0 md:ml-[16px] font-medium tracking-widest text-white uppercase bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none'>
+          <span className="text-sm">Solicitar----</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div className='md:w-[40vw] h-[20vh] mb-4 md:mb-0 md:mr-4 md:ml-4 bg-white flex  items-center'>
+    <div className='flex items-center justify-center w-16 h-16 md:w-24 md:h-24 rounded-full bg-orange-500 text-white mb-4 ml-[20px]'>
+      <MdRealEstateAgent size={120} />
+    </div>
+    <div className='flex flex-col justify-around w-[80%] h-[70%]'>
+      <span className='text-lg font-medium mb-2 ml-[20px]'>Publicar Inmueble</span>
+      <p className='text-sm mb-4 ml-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+      <div className='flex justify-end items-center'>
+        <button className='btn block w-[40%]  md:w-[25%] h-[2rem]  rounded-full ml-0 md:ml-[16px] font-medium tracking-widest text-white uppercase bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none'>
+          <span className="text-sm">Publicar----</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+          
+          <div className=' h-[27.2vh] bg-gray-900 bg-opacity-30 mt-[1.5rem] flex flex-col justify-center'>
+       
+          <h1 className="text-xl font-semibold mr-4 text-white mb-4 ml-[36px]">Hola ?, <span className="font-normal text-white">Realice su búsqueda</span></h1>    
+  <form className="flex flex-wrap justify-center  w-[100vw] ">
+   
+  <div className="w-[87%] md:w-[16%] ">
+               <select className= "block w-full md:w-[96%] p-[5px] h-[2rem]  text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                  id="genero"
+                  value=""
+                  onChange=""
+                  required
+                >
+                  <option value="bbbb">Seleccione su Ciudad :</option>
+                  <option value="masculino">La Plata </option>
+                  <option value="femenino">Quilmes</option>
+                  <option value="otro">Avellaneda</option>
+                 
+                </select>
+            </div>
+    <div className="w-[87%] md:w-[16%] ">
+               <select className= "block w-full md:w-[96%] p-[5px] h-[2rem]  text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                  id="genero"
+                  value=""
+                  onChange=""
+                  required
+                >
+                  <option value="bbbb">Seleccione su Barrio :</option>
+                  <option value="masculino">San jose </option>
+                  <option value="femenino">La Cañada</option>
+                  <option value="otro">La Carolina</option>
+                  <option value="otro">Villa Alsira</option>
+                 
+                </select>
             </div>
 
-            <div className='break-inside relative overflow-hidden flex flex-col justify-between space-y-3 text-sm max-w-full md:max-w-[45rem]  h-[21vh] rounded-[10px] p-4 mb-4 mr-[10px] ml-[10px] bg-white text-black dark:bg-slate-800 dark:text-white w-full md:w-[calc(50% - 1rem)] lg:w-[calc(33.33% - 1rem)]'>
-              <div className='flex flex-row items-center space-x-3'>
-                <div className='flex flex-none items-center justify-center w-20 h-20 rounded-full bg-orange-500 text-white' >
-                  <MdRealEstateAgent size={60} style={{ marginRight: '5px' }} />
-                </div>
-                <span className='text-xl font-medium'>Publicar inmueble</span>
-              </div>
-              <div> Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod.</div>
-              <div className='flex justify-end items-center '>
-                <button className='flex items-center justify-center text-xs font-medium rounded-full px-4 py-1 space-x-1 border-2 border-none bg-white hover:bg-orange-500 hover:text-white text-orange-500 dark:bg-slate-800 dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'>
-                  <span className="text-xl">Publicar</span>
-                  <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
-                    <path d='M5 12h13M12 5l7 7-7 7' />
-                  </svg>
-                </button>
-              </div>
+             <div className="w-[87%] md:w-[16%] ">
+               <select className= "block w-full md:w-[96%] p-[5px] h-[2rem]  text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                  id="genero"
+                  value=""
+                  onChange=""
+                  required
+                >
+                  <option value="bbbb">Seleccione tipo de inmueble :</option>
+                  <option value="masculino">Casa  </option>
+                  <option value="femenino">Departamento</option>
+                  <option value="otro">quinta</option>
+                 
+                </select>
             </div>
-          </div>
 
-          <div className='h-[23.4vh] flex fitems-center justify-center bg-gray-900 bg-opacity-30 mt-[6%]'>
-            <form >
-              <h1 className="text-xl font-semibold ml-[39px] text-white mb-[20px] ">Hola ?, <span className="font-normal text-white">Realice su búsqueda</span></h1>
-              <div className='flex flex-wrap justify-center w-[100vw]'>
-                <input id="lastname" type="text" name="lastname" placeholder="Doe" autoComplete="family-name" className="block w-[13%] h-[10%] m-[10px] p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-                <input id="lastname" type="text" name="lastname" placeholder="Doe" autoComplete="family-name" className="block w-[13%] h-[10%] m-[10px] p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-                <input id="email" type="email" name="email" placeholder="john.doe@company.com" autoComplete="email" className="block w-[13%] h-[10%] m-[10px] p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-                <input id="password" type="password" name="password" placeholder="********" autoComplete="new-password" className="block w-[13%] h-[10%] m-[10px] p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-                <input id="password-confirm" type="password" name="password-confirm" placeholder="********" autoComplete="new-password" className="block w-[13%] h-[10%] m-[10px] p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-                <div className='btn-buscador block w-[13%]'>
-                  <button type="submit" className="block w-[100%] py-3 mt-2 ml-[10px] font-medium tracking-widest text-white uppercase bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none">
-                    Buscar
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
+            <div className="w-[87%] md:w-[16%] ">
+               <select className= "block w-full md:w-[96%] p-[5px] h-[2rem]  text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                  id="genero"
+                  value=""
+                  onChange=""
+                  required
+                >
+                  <option value="bbbb">Pretencion :</option>
+                  <option value="masculino">***** </option>
+                  <option value="femenino">*****</option>
+                  <option value="otro">*****</option>
+                 
+                </select>
+            </div>
+            <div className="w-[87%] md:w-[16%] ">
+               <select className= "block w-full md:w-[96%] p-[5px] h-[2rem]  text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                  id="genero"
+                  value=""
+                  onChange=""
+                  required
+                >
+                  <option value="bbbb">Id: Inmueble :</option>
+                  <option value="masculino">****** </option>
+                  <option value="femenino">******</option>
+                  <option value="otro">******</option>
+                 
+                </select>
+            </div>
+    <div className="w-[87%] md:w-[16%] ">
+      <button
+        type="submit"
+        className="block w-full md:w-[96%] h-[2rem] ml-0 md:ml-[16px] font-medium tracking-widest text-white uppercase bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none"
+      >
+        Buscar
+      </button>
+    </div>
+  </form>
+</div>
+
         </section>
       </div>
     </div>
