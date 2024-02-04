@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <div className="flex flex-row justify-around flex-wrap mt-5">
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 mr-12">
           <h1 className="mb-3 text-xl">
             <b>Imoveis</b>
           </h1>
@@ -21,7 +21,7 @@ const Footer = () => {
           <a href="#">Encontre Empresas cConstrutoras</a>
           <a href="#">Encontre Assessores Financeiros</a>
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 ml-3">
           <h1 className="mb-3 text-xl">
             <b>Sobre Mercado Imobiliario</b>
           </h1>
@@ -31,7 +31,7 @@ const Footer = () => {
           <p href="#">
             <b>Segue-Nos</b>
           </p>
-          <div className="flex mt-3 gap-3 mb-4 text-orange-500 text-2xl">
+          <div className="flex mt-3 gap-3 mb-5 text-orange-500 text-2xl">
             <a href="#">
               <BsFacebook />
             </a>
