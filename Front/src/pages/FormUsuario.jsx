@@ -1,7 +1,8 @@
 const FormUsuario = () => {
   return (
     <>
-      <div className="bg-white dark:bg-orange-700 transition-colors duration-300">
+   <div className=" h-[100vh] flex flex-colum items-center justify-center" >
+      <div className="bg-white dark:bg-orange-700 transition-colors duration-300 ">
         <div className="container mx-auto p-4">
           <div className="bg-white dark:bg-orange-700 shadow rounded-lg p-6">
             <h1 className="text-xl font-semibold mb-4 text-black-700 dark:text-white">
@@ -66,6 +67,7 @@ const FormUsuario = () => {
             </form>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

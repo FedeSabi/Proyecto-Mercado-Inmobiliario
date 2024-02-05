@@ -6,17 +6,21 @@ import Home from "./pages/Home.jsx";
 import Footer from "./components/Footer.jsx";
 import CardsPropiedades from "./pages/CardsPropiedades.jsx";
 import FormUsuario from "./pages/FormUsuario.jsx";
-import { Navbar } from "./components/Header/Navbar.jsx";
-import { Inmuebles } from "./components/Main/Inmuebles.jsx";
+import { Navbar } from "./components/Navbar/Navbar.jsx";
+import { Inmuebles } from "./pages/Inmuebles.jsx";
+
+
+
 
 function App() {
   return (
     <>
       <Router>
-        <Navbar/>
-        <Inmuebles/>
+       
+      <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} /> 
+          <Route path="/Inmuebles" element={<Inmuebles />} />
           <Route path="/FormLogin" element={<FormLogin />} />
           <Route path="/FormUsuario" element={<FormUsuario />} />
           <Route path="/FormCorretor" element={<FormCorretor />} />

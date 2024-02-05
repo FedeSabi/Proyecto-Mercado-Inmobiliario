@@ -1,13 +1,14 @@
 const CardsPropiedades = () => {
   return (
     <>
+    <div className="h-[100vh] grid items-end mb-[10%] ">
       <div>
         <h1 className="my-4 mx-4 text-left text-3xl">
           <b>Resultados de la busqueda</b>
         </h1>
       </div>
 
-      <div className="flex flex-row m-4">
+      <div className="flex flex-row  m-4 ">
         <div className="relative mx-auto w-full max-w-sm pt-6">
           <a
             href="#"
@@ -420,6 +421,7 @@ const CardsPropiedades = () => {
             </div>
           </a>
         </div>
+      </div>
       </div>
     </>
   );

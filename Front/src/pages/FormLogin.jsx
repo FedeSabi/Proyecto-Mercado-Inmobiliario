@@ -1,6 +1,18 @@
+import { useState } from "react";
+import FormUsuario from "./FormUsuario";
 const FormLogin = () => {
+  const [registrarseVisible, setRegistrarseVisible] = useState(false);
+ 
+
+  const toggleRegistro = () => {
+    setRegistrarseVisible(!registrarseVisible);
+  };
+
+ 
+
   return (
-    <div className="max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-orange-300">
+    <div className=" h-[100vh] flex flex-colum items-center" >
+    <div className="max-w-lg mx-auto  bg-white p-8 rounded-xl shadow shadow-orange-300  mb-[10px]">
       <h1 className="text-4xl font-medium mb-3">Login</h1>
       <p className="text-orange-500">
         Hola, Bienvenido a Mercado Inmobiliario 👋
@@ -75,7 +87,8 @@ const FormLogin = () => {
           <p className="text-center">
             Todavia no estas Registrado?{" "}
             <a
-              href="#"
+              href="/FormUsuario"
+              onClick={toggleRegistro}
               className="text-orange-700 font-medium inline-flex space-x-1 items-center"
             >
               <span>Registrese Ahora </span>
@@ -99,6 +112,8 @@ const FormLogin = () => {
           </p>
         </div>
       </form>
+     
+    </div>
     </div>
   );
 };

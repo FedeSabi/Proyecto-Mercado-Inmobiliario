@@ -1,30 +1,34 @@
 import React, { useEffect } from 'react';
+
 import { Ripple, initTE } from 'tw-elements';
 import { FcFactory } from "react-icons/fc";
 import { FaRankingStar } from "react-icons/fa6";
 
+
 const Inmuebles = () => {
+ 
   useEffect(() => {
     initTE({ Ripple });
 
     return () => {
-      // Realiza alguna limpieza si es necesario
+    
     };
   }, []);
 
   return (
-    <div >
-      <div className='flex justify-center mt-[20px] '>
-      <h1 className="text-lg md:text-2xl lg:text-4xl">Solicitud de Inmuebles</h1>
+    
+    <div className='bg-white w-full'>
+      <div className='flex justify-center  '>
+      <h1 className="text-lg md:text-2xl lg:text-4xl mt-[185px] mb-[62px]">Solicitud de Inmuebles</h1>
 
       </div>
       
-    <div className='flex flex-wrap justify-center items-center min-h-[37vh]'>
+    <div className='flex flex-wrap justify-center items-center min-h-[37vh] '>
       
 
       <div className="flex justify-center items-center">
-        <div className="h-[26vh] m-[10px] block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-          <div className="p-6 h-[26vh] flex flex-col justify-between ">
+        <div className="m-[10px] block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div className="p-6  flex flex-col justify-between ">
             <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50 text-[#6B7280]">
           Penthouse para renta
             </h5>
@@ -85,8 +89,8 @@ const Inmuebles = () => {
 
       </div>
       <div className="flex justify-center items-center">
-        <div className=" h-[26vh] m-[10px]block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-          <div className="p-6 h-[26vh] flex flex-col justify-between ">
+        <div className="  m-[10px]block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div className="p-6  flex flex-col justify-between ">
             <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50 text-[#6B7280]">
            Loft para venta
             </h5>
@@ -149,8 +153,8 @@ const Inmuebles = () => {
       </div>
 
       <div className="flex justify-center items-center">
-        <div className="h-[26vh] m-[10px] block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-          <div className="p-6 h-[26vh] flex flex-col justify-between ">
+        <div className=" m-[10px] block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div className="p-6  flex flex-col justify-between ">
             <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50 text-[#6B7280]">
            Apartamento para relax en alquiler
             </h5>
@@ -215,28 +219,29 @@ const Inmuebles = () => {
      
     </div>
    <div className='flex items-center justify-center h-[9%] mb-[50px]'>
-   <button
+  
+        <a href="/CardsPropiedades"> <button 
           type="button"
-          href="#"
-          className=" flex justify-center inline-block rounded bg-orange-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+          href="/CardsPropiedades"
+          className=" flex justify-center inline-block rounded bg-orange-500 mt-[50px] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
           data-te-ripple-init
           data-te-ripple-color="light"
         >
-        ver todas las solicitudes
-        </button>
+         ver todas las solicitudes 
+        </button></a>
    </div>
    <div className='flex justify-evenly items-center bg-gray-200 h-[50vh]'>
-  <div className='flex justify-center items-center flex-col h-[33vh] w-[35vw] bg-white'>
-    <div className='bg-orange-500 aspect-w-1 aspect-h-1 p-[10%] flex justify-center items-center rounded-full focus:outline-none hover:bg-gray-400 hover:shadow-none'>
+  <div className='flex justify-center items-center flex-col  w-[35vw] bg-white'>
+    <div className='bg-orange-500 aspect-w-1 aspect-h-1 p-[10%] mt-[20px] flex justify-center items-center rounded-full focus:outline-none hover:bg-gray-400 hover:shadow-none'>
       <a href="#"><FaRankingStar size={100} color='#E64A19' /></a>
     </div>
     <h2 className='mt-[5px] text-xl text-[#6B7280]'>Ranking de corretores</h2>
   </div>
-  <div className='flex justify-center items-center flex-col h-[33vh] w-[35vw] bg-white'>
-    <div className='bg-orange-500 aspect-w-1 aspect-h-1 p-[10%] flex justify-center items-center rounded-full focus:outline-none hover:bg-gray-400 hover:shadow-none '>
+  <div className='flex justify-center items-center flex-col w-[35vw] bg-white'>
+    <div className='bg-orange-500 aspect-w-1 aspect-h-1 p-[10%] mt-[20px] flex justify-center items-center rounded-full focus:outline-none hover:bg-gray-400 hover:shadow-none '>
      <a href="#"><FcFactory size={100} /></a> 
     </div>
-    <h2 className='mt-[5px] text-xl text-[#6B7280]'>Todas las empresas constructoras</h2>
+    <h2 className='mt-[5px] text-xl text-[#6B7280]'>Empresas constructoras</h2>
   </div>
 </div>
 
@@ -245,9 +250,8 @@ const Inmuebles = () => {
 
    
     </div>
+   
   );
 };
 
 export { Inmuebles };
-
-
