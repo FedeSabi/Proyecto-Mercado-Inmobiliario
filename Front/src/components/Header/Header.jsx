@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import img_1 from '../../assets/img/header1.jpg';
 import { MdRealEstateAgent } from "react-icons/md";
+import { GiRapidshareArrow } from "react-icons/gi";
 import { GiNotebook } from "react-icons/gi";
 
 
@@ -31,14 +32,17 @@ const Header = () => {
       <GiNotebook size={120} />
     </div>
     <div className='flex flex-col justify-around w-[80%] h-[70%] mr-[10px]'>
-      <span className='text-lg font-medium mb-2 ml-[20px] mt-[72px]'>Solicitar Inmueble</span>
-      <p className='text-sm mb-4 ml-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-      <div className='flex justify-end items-center'>
-        <button className='btn block h-[2rem] mb-[20px]  rounded-full ml-0 md:ml-[16px] font-medium tracking-widest text-white uppercase bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none ' >
-          <a href="/Inmuebles"><span className="text-sm p-[15px] ">Solicitar----</span></a>
-        </button>
-      </div>
-    </div>
+  <span className='text-lg font-medium mb-2 ml-[20px] mt-[72px]'>Solicitar Inmueble</span>
+  <p className='text-sm mb-4 ml-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+  <div className='flex justify-end items-center'>
+    <a href="/Inmuebles" className='btn flex items-center h-[1.5rem] mb-[20px] rounded-full ml-0 md:ml-[16px] font-medium tracking-widest text-white uppercase bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none'>
+      <span className="flex items-center">
+        <span className="text-sm mr-2 ml-2">Solicitar</span>
+        <GiRapidshareArrow className="ml-2 mr-2 text-xl" />
+      </span>
+    </a>
+  </div>
+</div>
   </div>
 
   <div className='md:w-[40vw] rounded-[20px]  mb-4 md:mb-0 md:mr-4 md:ml-4 bg-white flex  items-center'>
@@ -46,14 +50,17 @@ const Header = () => {
       <MdRealEstateAgent size={120} />
     </div>
     <div className='flex flex-col justify-around w-[80%] h-[70%] mr-[10px]'>
-      <span className='text-lg font-medium mb-2 ml-[20px] mt-[72px]'>Publicar Inmueble</span>
-      <p className='text-sm mb-4 ml-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-      <div className='flex justify-end items-center'>
-        <button className='btn block  h-[2rem] mb-[20px]  rounded-full ml-0 md:ml-[16px] font-medium tracking-widest text-white uppercase bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none'>
-          <span className="text-sm p-[15px]">Publicar----</span>
-        </button>
-      </div>
-    </div>
+  <span className='text-lg font-medium mb-2 ml-[20px] mt-[72px]'>Solicitar Inmueble</span>
+  <p className='text-sm mb-4 ml-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+  <div className='flex justify-end items-center'>
+    <a href="/Inmuebles" className='btn flex items-center h-[1.5rem] mb-[20px] rounded-full ml-0 md:ml-[16px] font-medium tracking-widest text-white uppercase bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none'>
+      <span className="flex items-center">
+        <span className="text-sm mr-2 ml-2">Solicitar</span>
+        <GiRapidshareArrow className="ml-2 mr-2 text-xl" />
+      </span>
+    </a>
+  </div>
+</div>
   </div>
 </div>
 
