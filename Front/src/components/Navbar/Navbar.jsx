@@ -1,8 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { BsPersonCircle } from "react-icons/bs";
 import { BsWhatsapp } from "react-icons/bs";
 import FormLogin from '../../pages/FormLogin';
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
     const [loginVisible, setLoginVisible] = useState(false);
@@ -47,8 +49,8 @@ const Navbar = () => {
     <a className="flex items-center hover:text-gray-500 text-orange-500" href="#">
       <BsWhatsapp size={30} />
     </a>
-    <a className="flex items-center" onClick={toggleLogin}>
-<p className="text-blue-900 text-lg hover:text-orange-500">Iniciar sesión</p>
+    <a className="flex items-center hover:text-gray-500 text-orange-500" href="#" onClick={toggleLogin}>
+    <BsPersonCircle size={30}/>
 </a>
 
 
@@ -62,7 +64,9 @@ const Navbar = () => {
 </a>
 
 <ul className={`md:hidden px-6 mx-auto font-semibold font-heading  ${menuVisible ? 'flex flex-col' : 'hidden'}`} >
-  <li><a className="hover:text-gray-200 " href="/CardsPropiedades">Inmuebles</a></li>
+  <li>
+  <Link to="/Inmuebles"className='hover:text-gray-200'>Inmueble</Link>
+  </li>
   <li><a className="hover:text-gray-200 " href="#">Ver corredores</a></li>
   <li><a className="hover:text-gray-200 " href="#">Ver constructoras</a></li>
   <li><a className="hover:text-gray-200 " href="#">Sobre nosotros</a></li>
