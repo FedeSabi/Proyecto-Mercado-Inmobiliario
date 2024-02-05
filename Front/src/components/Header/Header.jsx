@@ -35,7 +35,7 @@ const Header = () => {
   <span className='text-lg font-medium mb-2 ml-[20px] mt-[72px]'>Solicitar Inmueble</span>
   <p className='text-sm mb-4 ml-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
   <div className='flex justify-end items-center'>
-    <a href="/Inmuebles" className='btn flex items-center h-[1.5rem] mb-[20px] rounded-full ml-0 md:ml-[16px] font-medium tracking-widest text-white uppercase bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none'>
+    <a href="/Inmuebles" className='btn flex items-center h-[2rem] mb-[20px] rounded-full ml-0 md:ml-[16px] font-medium tracking-widest text-white uppercase bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none'>
       <span className="flex items-center">
         <span className="text-sm mr-2 ml-2">Solicitar</span>
         <GiRapidshareArrow className="ml-2 mr-2 text-xl" />
@@ -53,7 +53,7 @@ const Header = () => {
   <span className='text-lg font-medium mb-2 ml-[20px] mt-[72px]'>Solicitar Inmueble</span>
   <p className='text-sm mb-4 ml-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
   <div className='flex justify-end items-center'>
-    <a href="/Inmuebles" className='btn flex items-center h-[1.5rem] mb-[20px] rounded-full ml-0 md:ml-[16px] font-medium tracking-widest text-white uppercase bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none'>
+    <a href="/Inmuebles" className='btn flex items-center h-[2rem] mb-[20px] rounded-full ml-0 md:ml-[16px] font-medium tracking-widest text-white uppercase bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none'>
       <span className="flex items-center">
         <span className="text-sm mr-2 ml-2">Solicitar</span>
         <GiRapidshareArrow className="ml-2 mr-2 text-xl" />
