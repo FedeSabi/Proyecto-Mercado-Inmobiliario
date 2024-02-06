@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const CardsPropiedades = () => {
   return (
     <>
@@ -427,3 +428,5 @@ const CardsPropiedades = () => {
   );
 };
 export default CardsPropiedades;
+=======
+>>>>>>> 0e8b9743763342dccbbd416f497d8890f52aa407

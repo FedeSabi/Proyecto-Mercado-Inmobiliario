@@ -1,0 +1,5 @@
+CREATE TABLE users (
+    id INT PRYMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    last name VARCHAR(255) NOT NULL,
+);
