@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FormCorretor from './pages/FormCorretor.jsx';
@@ -41,5 +40,3 @@ function App() {
 }
 
 export default App;
-=======
->>>>>>> 0e8b9743763342dccbbd416f497d8890f52aa407

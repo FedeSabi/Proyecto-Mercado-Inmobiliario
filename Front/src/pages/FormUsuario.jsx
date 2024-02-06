@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 
@@ -93,5 +92,3 @@ const FormUsuario = () => {
 };
 
 export default FormUsuario;
-=======
->>>>>>> 0e8b9743763342dccbbd416f497d8890f52aa407
