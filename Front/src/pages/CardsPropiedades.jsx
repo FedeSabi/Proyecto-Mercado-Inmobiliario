@@ -1,8 +1,8 @@
 const CardsPropiedades = () => {
   return (
     <>
-    <div className="h-[100vh] grid items-end mb-[10%] ">
-      <div>
+    <div className="h-[80vh] grid items-end mb-[10%] ">
+      <div className="mt-[10%]">
         <h1 className="my-4 mx-4 text-left text-3xl">
           <b>Resultados de la busqueda</b>
         </h1>

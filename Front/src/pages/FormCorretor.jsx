@@ -2,16 +2,16 @@
 const FormCorretor = () => {
   return (
     <div className="bg-white dark:bg-orange-700 transition-colors duration-300">
-      <div className="container mx-auto p-4">
-        <div className="bg-white dark:bg-orange-700 shadow rounded-lg p-6">
-          <h1 className="text-xl font-semibold mb-4 text-black-700 dark:text-white">
-            Construtora
+      <div className="container mx-auto p-4 ">
+      <div className="bg-white dark:bg-orange-700 shadow rounded-lg p-6 sm:mt-10 md:mt-20 lg:mt-30 xl:mt-40">
+  <h1 className="text-xl font-semibold mb-4 text-black-700 dark:text-white ">
+            Corredor
           </h1>
           <p className="text-black-700 dark:text-orange-700 mb-6">
             Utiliza una dirección permanente donde puedas recibir correo.
           </p>
           <form>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 ">
               <input
                 type="text"
                 placeholder="Instagram"

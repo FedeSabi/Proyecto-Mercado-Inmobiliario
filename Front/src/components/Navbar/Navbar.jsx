@@ -31,12 +31,13 @@ const Navbar = () => {
   </a>
 
   <ul className={`hidden md:flex px-6 mx-auto font-semibold font-heading space-x-12 ${menuVisible ? 'hidden' : 'flex'}`}>
-    <li><a className="hover:text-gray-200 sm:text-lg md:text-2x1 lg:text-2x1 xl:text-3x1" href="/CardsPropiedades">Inmuebles</a></li>
-    <li><a className="hover:text-gray-200 sm:text-lg md:text-2x1 lg:text-2x1 xl:text-3x1" href="/FormCorretor">Corredores</a></li>
-    <li><a className="hover:text-gray-200 sm:text-lg md:text-2x1 lg:text-2x1 xl:text-3x1" href="/FormConstrutora">Constructoras</a></li>
-    <li><a className="hover:text-gray-200 sm:text-lg md:text-2x1 lg:text-2x1 xl:text-3x1" href="#">Nosotros</a></li>
-    <li><a className="hover:text-gray-200 sm:text-lg md:text-2x1 lg:text-2x1 xl:text-3x1" href="#">Contactos</a></li>
-    <li><a className="hover:text-gray-200 sm:text-lg md:text-2x1 lg:text-2x1 xl:text-3x1" href="#">Blog</a></li>
+  <li><a className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl" href="/CardsPropiedades">Inmuebles</a></li>
+<li><a className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl" href="/FormCorretor">Corredores</a></li>
+<li><a className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl" href="/FormConstrutora">Constructoras</a></li>
+<li><a className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl" href="#">Nosotros</a></li>
+<li><a className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl" href="#">Contactos</a></li>
+<li><a className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl" href="#">Blog</a></li>
+
   </ul>
 
   <div className="hidden xl:flex items-center space-x-5 items-center">

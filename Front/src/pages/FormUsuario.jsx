@@ -1,4 +1,14 @@
+import { useState } from 'react';
+import { Navigate } from 'react-router-dom';
+
+
 const FormUsuario = () => {
+
+  const [opcionSeleccionada, setOpcionSeleccionada] = useState("");
+
+  const handleChange = (e) => {
+    setOpcionSeleccionada(e.target.value);
+  };
   return (
     <>
    <div className=" h-[100vh] flex flex-colum items-center justify-center" >
@@ -8,11 +18,19 @@ const FormUsuario = () => {
             <h1 className="text-xl font-semibold mb-4 text-black-700 dark:text-white">
               <b>Si no esta Registrado:</b> registrarse
             </h1>
-                  <select className="bg-white border p-2 rounded w-[49%] border-orange-600 mb-4">
+            <select
+                 className="bg-white border p-2 rounded w-[49%] border-orange-600 mb-4"
+        onChange={handleChange}
+        value={opcionSeleccionada}
+      >
                   <option value="opcion1">Persona</option>
-                  <option value="opcion2">Inmobiliaria</option>
+                  <option value="opcion2">Corredor</option>
                   <option value="opcion3">Constructora</option>
                 </select>
+                {opcionSeleccionada === 'opcion1' && <Navigate to="/FormUsuario" />}
+                {opcionSeleccionada === 'opcion2' && <Navigate to="/FormCorretor" />}
+                {opcionSeleccionada === 'opcion3' && <Navigate to="/FormConstrutora" />}
+
             <p className="text-black-700 dark:text-orange-700 mb-6 focus:outline-none">
               Utiliza una dirección permanente donde puedas recibir correo.
             </p>
