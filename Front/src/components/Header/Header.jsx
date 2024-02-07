@@ -1,4 +1,4 @@
-import  { useState } from "react";
+
 import img_1 from "../../assets/img/header1.jpg";
 import { MdRealEstateAgent } from "react-icons/md";
 import { GiRapidshareArrow } from "react-icons/gi";

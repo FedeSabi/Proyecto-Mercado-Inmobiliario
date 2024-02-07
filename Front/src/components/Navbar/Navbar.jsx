@@ -38,7 +38,7 @@ const Navbar = () => {
             <li>
               <a
                 className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl"
-                href="/CardsPropiedades"
+                href="/Inmuebles"
               >
                 Inmuebles
               </a>
@@ -70,7 +70,7 @@ const Navbar = () => {
             <li>
               <a
                 className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl"
-                href="#"
+                href="/Contacto"
               >
                 Contactos
               </a>
@@ -124,9 +124,9 @@ const Navbar = () => {
             stroke="currentColor"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
@@ -139,7 +139,7 @@ const Navbar = () => {
         >
           <li>
             <Link to="/Inmuebles" className="hover:text-gray-200">
-              Inmueble
+              Inmuebles
             </Link>
           </li>
           <li>
@@ -158,9 +158,9 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="hover:text-gray-200 " href="#">
-              Contactos
-            </a>
+          <Link to="/Contacto" className="hover:text-gray-200">
+              Contacto
+            </Link>
           </li>
           <li>
             <a className="hover:text-gray-200 " href="#">
