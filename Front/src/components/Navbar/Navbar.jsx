@@ -62,7 +62,7 @@ const Navbar = () => {
             <li>
               <a
                 className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl"
-                href="#"
+                href="/Nosotros"
               >
                 Nosotros
               </a>
@@ -85,7 +85,7 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <div className="hidden xl:flex items-center space-x-5 items-center">
+          <div className="hidden xl:flex items-center space-x-5">
             <a className="hover:text-gray-500 text-orange-500" href="#">
               <FaFacebook size={30} />
             </a>
@@ -153,9 +153,9 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="hover:text-gray-200 " href="#">
+            <Link to="/Nosotros" className="hover:text-gray-200 ">
               Sobre nosotros
-            </a>
+            </Link>
           </li>
           <li>
           <Link to="/Contacto" className="hover:text-gray-200">

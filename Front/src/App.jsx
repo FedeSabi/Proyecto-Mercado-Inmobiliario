@@ -12,6 +12,7 @@ import { Navbar } from "./components/Navbar/Navbar.jsx";
 import { Inmuebles } from "./pages/Inmuebles.jsx";
 import FormConstrutora from "./pages/FormConstrutora.jsx";
 import Contacto from "./pages/Contacto.jsx";
+import Nosotros from "./pages/Nosotros.jsx";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/Contacto" element={<Contacto />} />
           <Route path="/FormCorretor" element={<FormCorretor />} />
           <Route path="/FormConstrutora" element={<FormConstrutora />} />
+          <Route path="/Nosotros" element={<Nosotros />} />
           <Route path="/CardsPropiedades" element={<CardsPropiedades />} />
           <Route
             path="/InmuebleFormPersona"
