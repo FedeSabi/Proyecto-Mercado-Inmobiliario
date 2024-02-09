@@ -3,10 +3,10 @@ import ImgNosotros from '../assets/img/imgNosotros.jpg'
 
 const Nosotros = () => {
   return (
-    <div className="bg-white relative flex items-center justify-center overflow-hidden z-50">
+    
       <div className="relative mx-auto h-full px-4 pb-20 md:pb-10 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
         <div className="flex flex-col items-center justify-between lg:flex-row py-16">
-          <div className="relative">
+          <div className="relative mt-28">
             <div className="lg:max-w-xl lg:pr-5 relative z-40">
               <p className="flex text-sm uppercase text-g1">Sobre Nosotros</p>
               <h2 className="mb-6 max-w-lg text-5xl font-light leading-snug tracking-tight text-g1 sm:text-7xl sm:leading-snug">
@@ -34,7 +34,7 @@ const Nosotros = () => {
               <img src={ImgNosotros} alt="placeholder" />
             </div>
           </div>
-        </div>
+       
       </div>
       <div className="hidden text-9xl varien absolute top-6 left-1/4 text-g/10 z-40">About Us</div>
       <div className="absolute -bottom-24 left-10 z-0 opacity-10">
