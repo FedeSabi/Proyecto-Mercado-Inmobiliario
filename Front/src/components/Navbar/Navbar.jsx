@@ -24,7 +24,7 @@ const Navbar = () => {
     <div >
              <nav className={`flex justify-between text-white bg-gray-900 bg-opacity-30 w-screen p-4 z-50 fixed ${menuVisible ? 'flex-col' : ''}`}>
 
-<div className="px-5 xl:px-12 py-2 flex w-full items-center">
+<div className="px-5 xl:px-12 py-2 flex w-[98%] items-center">
   <a className="text-3xl font-bold font-heading" href="/">
     <p className="text-orange-500">Mercado</p>
     <p className="h-9 text-orange-500">Inmobiliario</p>
@@ -36,7 +36,7 @@ const Navbar = () => {
 <li><a className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl" href="/FormConstrutora">Constructoras</a></li>
 <li><a className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl" href="#">Nosotros</a></li>
 <li><a className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl" href="#">Contactos</a></li>
-<li><a className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl" href="#">Blog</a></li>
+
 
   </ul>
 
@@ -72,7 +72,7 @@ const Navbar = () => {
   <li><a className="hover:text-gray-200 " href="#">Ver constructoras</a></li>
   <li><a className="hover:text-gray-200 " href="#">Sobre nosotros</a></li>
   <li><a className="hover:text-gray-200 " href="#">Contactos</a></li>
-  <li><a className="hover:text-gray-200 " href="#">Blog</a></li>
+ 
 </ul>
 </nav>
 <div>

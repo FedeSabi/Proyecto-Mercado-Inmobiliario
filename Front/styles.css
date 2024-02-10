@@ -9,3 +9,19 @@
  .react-multiple-carousel__arrow:hover{
   background-color: #808080 !important; 
  }
+
+
+
+
+ 
+ .carousel{
+    width: 50vw;
+    
+   
+ }
+ .carousel-control-prev-icon{
+    margin-top: 100px;
+ }
+ .carousel-control-next-icon{
+    margin-top: 100px;
+ }

@@ -11,6 +11,11 @@ import FormBusquedaUser from "./pages/FormBusquedaUser.jsx";
 import { Navbar } from "./components/Navbar/Navbar.jsx";
 import { Inmuebles } from "./pages/Inmuebles.jsx";
 import FormConstrutora from "./pages/FormConstrutora.jsx";
+import { DetalleInmuebles } from "./pages/DetalleInmuebles.jsx";
+
+
+
+
 
 
 
@@ -25,8 +30,9 @@ function App() {
       <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} /> 
-          <Route path="/Inmuebles" element={<Inmuebles />} />
+          <Route path="/Inmuebles" element={< Inmuebles />} />
           <Route path="/FormLogin" element={<FormLogin />} />
+          <Route path="/DetalleInmuebles" element={<DetalleInmuebles/>}/>
           <Route path="/FormUsuario" element={<FormUsuario />} />
           <Route path="/FormCorretor" element={<FormCorretor />} />
           <Route path="/FormConstrutora" element={<FormConstrutora />} />

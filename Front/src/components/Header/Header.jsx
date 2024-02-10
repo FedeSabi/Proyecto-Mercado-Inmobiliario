@@ -146,12 +146,17 @@ const Header = () => {
                 </select>
               </div>
               <div className="w-[87%] md:w-[16%] ">
+                
+                <Link to="/DetalleInmuebles">
                 <button
                   type="submit"
                   className="block w-full md:w-[96%] h-[2rem] ml-0 md:ml-[16px] rounded-[8px] font-medium tracking-widest text-white uppercase bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none"
                 >
                   Buscar
                 </button>
+
+
+                </Link>
               </div>
             </form>
           </div>
