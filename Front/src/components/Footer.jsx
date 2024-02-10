@@ -11,11 +11,11 @@ const Footer = () => {
           <a href="#">Solicitar um Imoveis</a>
           <a href="#">Publicar um imovel</a>
           <a href="#">Buscar imoveis</a>
-          <a href="#">Ver solicitudes de imoveis</a>
+          <a href="#">Ver solicitudes de inmuebles</a>
         </div>
         <div className="flex flex-col gap-1">
           <h1 className="mb-3 text-xl">
-            <b>Professionais</b>
+            <b>Profesionales</b>
           </h1>
           <a href="#">Contacto Inmobiliarias</a>
           <a href="#">Contacto Empresas Constructoras</a>
@@ -29,7 +29,7 @@ const Footer = () => {
           <a href="#">Blog</a>
           <a href="#">Contacto</a>
           <p href="#">
-            <b>Segue-Nos</b>
+            <b>Siguenos</b>
           </p>
           <div className="flex mt-3 gap-3 mb-5 text-orange-500 text-2xl">
             <a href="#">
