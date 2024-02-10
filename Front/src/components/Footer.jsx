@@ -6,39 +6,38 @@ const Footer = () => {
       <div className="flex flex-row justify-around flex-wrap mt-5">
         <div className="flex flex-col gap-1 mr-12">
           <h1 className="mb-3 text-xl">
-            <b>Imoveis</b>
+            <b>Inmuebles</b>
           </h1>
-          <a href="#">Solicitar um Imoveis</a>
-          <a href="#">Publicar um imovel</a>
-          <a href="#">Buscar imoveis</a>
-          <a href="#">Ver solicitudes de imoveis</a>
+          <a href="#">Solicitar un Inmueble</a>
+          <a href="#">Publicar un Inmueble</a>
+          <a href="#">Buscar inmueble</a>
+          <a href="#">Ver solicitudes de inmuebles</a>
         </div>
         <div className="flex flex-col gap-1">
           <h1 className="mb-3 text-xl">
-            <b>Professionais</b>
+            <b>Profesionales</b>
           </h1>
-          <a href="#">Encontre Corretores</a>
-          <a href="#">Encontre Empresas cConstrutoras</a>
-          <a href="#">Encontre Assessores Financeiros</a>
+          <a href="#">Contacto Inmobiliarias</a>
+          <a href="#">Contacto Empresas Constructoras</a>
+          <a href="#">Contacto Asesores Financieros</a>
         </div>
         <div className="flex flex-col gap-1 ml-3">
           <h1 className="mb-3 text-xl">
             <b>Sobre Mercado Imobiliario</b>
           </h1>
-          <a href="#">sobre Nos</a>
-          <a href="#">Blog</a>
-          <a href="#">Contato</a>
+          <a href="/Nosotros">Nosotros</a>
+          <a href="/contacto">Contacto</a>
           <p href="#">
-            <b>Segue-Nos</b>
+            <b>Siguenos</b>
           </p>
           <div className="flex mt-3 gap-3 mb-5 text-orange-500 text-2xl">
-            <a href="#">
+            <a href="https://www.facebook.com/">
               <BsFacebook />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/">
               <BsInstagram />
             </a>
-            <a href="#">
+            <a href="https://www.whatsapp.com/?lang=es_LA">
               <BsWhatsapp />
             </a>
           </div>
