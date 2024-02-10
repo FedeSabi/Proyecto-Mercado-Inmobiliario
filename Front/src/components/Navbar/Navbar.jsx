@@ -86,12 +86,12 @@ const Navbar = () => {
           </ul>
 
           <div className="hidden xl:flex items-center space-x-5">
-            <a className="hover:text-gray-500 text-orange-500" href="#">
+            <a className="hover:text-gray-500 text-orange-500" href="https://www.facebook.com/">
               <FaFacebook size={30} />
             </a>
             <a
               className="flex items-center hover:text-gray-500 text-orange-500"
-              href="#"
+              href="https://www.instagram.com/"
             >
               <FaInstagram size={30} />
             </a>
@@ -103,7 +103,7 @@ const Navbar = () => {
             </a>
             <a
               className="flex items-center hover:text-gray-500 text-orange-500"
-              href="#"
+              href="https://www.whatsapp.com/?lang=es_LA"
               onClick={toggleLogin}
             >
               <BsPersonCircle size={30} />

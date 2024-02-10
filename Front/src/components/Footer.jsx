@@ -32,13 +32,13 @@ const Footer = () => {
             <b>Siguenos</b>
           </p>
           <div className="flex mt-3 gap-3 mb-5 text-orange-500 text-2xl">
-            <a href="#">
+            <a href="https://www.facebook.com/">
               <BsFacebook />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/">
               <BsInstagram />
             </a>
-            <a href="#">
+            <a href="https://www.whatsapp.com/?lang=es_LA">
               <BsWhatsapp />
             </a>
           </div>
