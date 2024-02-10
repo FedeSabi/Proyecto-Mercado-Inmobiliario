@@ -25,9 +25,8 @@ const Footer = () => {
           <h1 className="mb-3 text-xl">
             <b>Sobre Mercado Imobiliario</b>
           </h1>
-          <a href="#">Nosotros</a>
-          <a href="#">Blog</a>
-          <a href="#">Contacto</a>
+          <a href="/Nosotros">Nosotros</a>
+          <a href="/contacto">Contacto</a>
           <p href="#">
             <b>Siguenos</b>
           </p>
