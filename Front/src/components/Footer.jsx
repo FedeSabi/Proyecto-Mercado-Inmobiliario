@@ -8,9 +8,9 @@ const Footer = () => {
           <h1 className="mb-3 text-xl">
             <b>Inmuebles</b>
           </h1>
-          <a href="#">Solicitar um Imoveis</a>
-          <a href="#">Publicar um imovel</a>
-          <a href="#">Buscar imoveis</a>
+          <a href="#">Solicitar un Inmueble</a>
+          <a href="#">Publicar un Inmueble</a>
+          <a href="#">Buscar inmueble</a>
           <a href="#">Ver solicitudes de inmuebles</a>
         </div>
         <div className="flex flex-col gap-1">
