@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="flex flex-row justify-around flex-wrap mt-5">
         <div className="flex flex-col gap-1 mr-12">
           <h1 className="mb-3 text-xl">
-            <b>Imoveis</b>
+            <b>Inmuebles</b>
           </h1>
           <a href="#">Solicitar um Imoveis</a>
           <a href="#">Publicar um imovel</a>
@@ -17,17 +17,17 @@ const Footer = () => {
           <h1 className="mb-3 text-xl">
             <b>Professionais</b>
           </h1>
-          <a href="#">Encontre Corretores</a>
-          <a href="#">Encontre Empresas cConstrutoras</a>
-          <a href="#">Encontre Assessores Financeiros</a>
+          <a href="#">Contacto Inmobiliarias</a>
+          <a href="#">Contacto Empresas Constructoras</a>
+          <a href="#">Contacto Asesores Financieros</a>
         </div>
         <div className="flex flex-col gap-1 ml-3">
           <h1 className="mb-3 text-xl">
             <b>Sobre Mercado Imobiliario</b>
           </h1>
-          <a href="#">sobre Nos</a>
+          <a href="#">Nosotros</a>
           <a href="#">Blog</a>
-          <a href="#">Contato</a>
+          <a href="#">Contacto</a>
           <p href="#">
             <b>Segue-Nos</b>
           </p>
