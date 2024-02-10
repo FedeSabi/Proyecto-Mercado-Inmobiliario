@@ -27,7 +27,7 @@ const DetalleInmuebles = () => {
         <div className='w-[50vw] h-[20%] '>
           <div className='flex justify-between items-end h-[20vh]'>
             <div>
-              <h1 className='text-orange-500 text-sm md:text-lg lg:text-xl xl:text-1xl'>CASA EN VENTA RESIDENCIAL - VILLA NUEVA</h1>
+              <h1 className=' ml-[50px] text-orange-500 text-sm md:text-lg lg:text-xl xl:text-1xl'>CASA EN VENTA RESIDENCIAL - VILLA NUEVA</h1>
             </div>
             <div>
               <h1 className='text-orange-500 text-sm md:text-lg lg:text-xl xl:text-1xl'>
@@ -38,9 +38,9 @@ const DetalleInmuebles = () => {
           <h1 className='w-[50vw] flex justify-end text-green-500 text-sm md:text-lg lg:text-xl xl:text-1xl'>U$D  110.000</h1>
         </div>
   
-        <div className='flex'>
+        <div className='flex flex-wrap ml-10'>
             <div className='flex flex-col'>
-            <div className="h-[65vh] p-3 relative w-[50vw]">
+            <div className="h-[65vh] p-3 relative w-[50vw] ">
             <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="w-full h-full object-cover rounded-lg" />
             <button onClick={prevSlide} className="absolute left-0 top-1/2 transform -translate-y-1/2 px-4 py-2 h-[48px] bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none text-white rounded-full">←</button>
             <button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2 px-4 py-2 h-[48px] bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none text-white rounded-full">→</button>
@@ -62,8 +62,8 @@ const DetalleInmuebles = () => {
             </div>
          
         
-            <div className=" flex justify-start mt-[20px]  ml-[8%] ">
-              <div className="max-w-lg bg-white p-8 rounded-xl shadow shadow-orange-300 ] h-[62vh] w-[90vw] mr-[8%]">
+            <div className=" flex justify-start mb-[20px]  ml-[8%] ">
+              <div className="flex flex-col justify-center max-w-lg bg-white p-8 rounded-xl shadow shadow-orange-300 ] h-[70vh] w-[90vw] mr-[8%]">
                 
           
                 
@@ -129,19 +129,19 @@ const DetalleInmuebles = () => {
                     </button>
                   <div>
                   <div className="hidden xl:flex items-center space-x-5 items-center justify-around">
-            <a className="hover:text-gray-500 text-orange-500" href="#">
-              <FaFacebook size={30} />
-            </a>
-            <a className="flex items-center hover:text-gray-500 text-orange-500" href="#">
-              <FaInstagram size={30} />
-            </a>
-            <a className="flex items-center hover:text-gray-500 text-orange-500" href="#">
-              <BsWhatsapp size={30} />
-            </a>
+                <a className="hover:text-gray-500 text-orange-500" href="#">
+                 <FaFacebook size={30} />
+                </a>
+                    <a className="flex items-center hover:text-gray-500 text-orange-500" href="#">
+               <FaInstagram size={30} />
+               </a>
+                    <a className="flex items-center hover:text-gray-500 text-orange-500" href="#">
+                     <BsWhatsapp size={30} />
+                   </a>
           
         
         
-          </div>
+                   </div>
                   </div>
                   </div>
                 </form>
