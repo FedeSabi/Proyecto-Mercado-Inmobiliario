@@ -25,6 +25,7 @@ const DetalleInmuebles = () => {
     return (
       <div>
         <div className='w-[50vw] h-[20%] '>
+          <div className='h-[3vh]'></div>
           <div className='flex justify-between items-end h-[20vh]'>
             <div>
               <h1 className=' ml-[50px] text-orange-500 text-sm md:text-lg lg:text-xl xl:text-1xl'>CASA EN VENTA RESIDENCIAL - VILLA NUEVA</h1>

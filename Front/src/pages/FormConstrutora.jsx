@@ -1,8 +1,9 @@
 const FormConstrutora = () => {
   return (
     <div className="bg-white dark:bg-orange-700 transition-colors duration-300">
+      <div className="h-[15vh]"></div>
     <div className="container mx-auto p-4 ">
-    <div className="bg-white dark:bg-orange-700 shadow rounded-lg p-6 sm:mt-10 md:mt-20 lg:mt-30 xl:mt-40">
+    <div className="bg-white dark:bg-orange-700 shadow rounded-lg p-6 ">
 <h1 className="text-xl font-semibold mb-4 text-black-700 dark:text-white ">
           Constructora
         </h1>

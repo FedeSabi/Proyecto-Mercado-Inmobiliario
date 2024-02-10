@@ -1,7 +1,8 @@
 const FormBusquedaUser = () => {
   return (
     <div className="flex h-full items-center justify-center flex-col  mb-24">
-      <div className="grid bg-white rounded-lg shadow-xl w-11/12 md:w-9/12 lg:w-1/2 mt-[10%]">
+      <div className="h-[16vh]"></div>
+      <div className="grid bg-white rounded-lg shadow-xl w-11/12 md:w-9/12 lg:w-1/2 ">
         <div className="flex justify-center">
           <div className="flex">
             <h1 className="text-gray-600 font-bold mt-7 md:text-2xl text-xl ">

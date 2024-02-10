@@ -14,13 +14,14 @@ import imagen6 from "../assets/img/yaopey-1.jpg";
 // Importa tu componente de Card
 const Card = ({ id, title, imageSrc }) => (
   <div className=" flex items-center mt-[20%] ">
+    <div className="h-[17vh]"></div>
     <div className="relative mx-auto w-full max-w-sm pt-6 ">
       <a
         href="#"
         className="relative inline-block w-full transform transition-transform duration-300 ease-in-out"
       >
-        <div className="rounded-lg">
-          <div className="relative flex h-[40vh] justify-center overflow-hidden rounded-lg">
+        <div className="rounded-lg ml-[5%] mr-[5%]">
+          <div className="relative flex h-[40vh] justify-center overflow-hidden rounded-lg ">
             <div className="w-full transform transition-transform duration-500 ease-in-out hover:scale-110">
               <img
                 src={imageSrc}
@@ -185,6 +186,7 @@ const Inmuebles = () => {
 
   return (
     <div>
+      <div className="h-[5vh]"></div>
       <Carousel
         responsive={responsive}
         infinite
@@ -200,7 +202,7 @@ const Inmuebles = () => {
         ))}
       </Carousel>
 
-      <div className="flex  justify-around h-[9%] mb-[50px] ">
+      <div className="flex  justify-around h-[9%] mb-[50px] flex-wrap ">
         <a
           href="/CardsPropiedades"
           type="button"
