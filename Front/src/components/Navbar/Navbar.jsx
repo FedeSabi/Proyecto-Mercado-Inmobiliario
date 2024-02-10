@@ -6,11 +6,7 @@ import FormLogin from "../../pages/FormLogin";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [loginVisible, setLoginVisible] = useState(false);
-
-  const toggleLogin = () => {
-    setLoginVisible(!loginVisible);
-  };
+ 
 
   const [menuVisible, setMenuVisible] = useState(false);
 
@@ -90,17 +86,20 @@ const Navbar = () => {
             </a>
             <a
               className="flex items-center hover:text-gray-500 text-orange-500"
-              href="#"
+              href="https://www.whatsapp.com/?lang=es_LA"
             >
               <BsWhatsapp size={30} />
             </a>
+
+            <Link to="/FormLogin">
             <a
               className="flex items-center hover:text-gray-500 text-orange-500"
-              href="https://www.whatsapp.com/?lang=es_LA"
-              onClick={toggleLogin}
-            >
+             >
               <BsPersonCircle size={30} />
             </a>
+            </Link>
+            
+            
           </div>
         </div>
 
@@ -158,7 +157,7 @@ const Navbar = () => {
           
         </ul>
       </nav>
-      <div>{loginVisible && <FormLogin />}</div>
+    
     </div>
   );
 };
