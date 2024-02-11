@@ -28,7 +28,7 @@ const Header = () => {
                 </p>
                 <div className="flex justify-end items-center">
                   <Link
-                    to="/Inmuebles"
+                    to="/inmuebleFormPersona"
                     className="btn flex items-center h-[2rem] mb-[20px] rounded-full ml-0 md:ml-[16px] font-medium tracking-widest text-white uppercase bg-orange-500 focus:outline-none hover:bg-gray-500 hover:shadow-none"
                   >
                     <span className="flex items-center">
@@ -157,8 +157,6 @@ const Header = () => {
                 >
                   Buscar
                 </button>
-
-
                 </Link>
               </div>
             </form>

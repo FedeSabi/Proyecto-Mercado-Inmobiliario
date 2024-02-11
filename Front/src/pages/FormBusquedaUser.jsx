@@ -231,7 +231,7 @@ const FormBusquedaUser = () => {
             Cancel
           </button>
           <button className="w-auto bg-orange-500 hover:bg-orange-700 rounded-lg shadow-xl font-medium text-white px-4 py-2">
-            Solicitar
+            Publicar
           </button>
         </div>
       </div>
