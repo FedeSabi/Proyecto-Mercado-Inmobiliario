@@ -1,11 +1,11 @@
 const InmuebleFormPersona = () => {
   return (
-    <div className="flex h-full items-center justify-center mt-4 mb-24">
-      <div className="grid bg-white rounded-lg shadow-xl w-11/12 md:w-9/12 lg:w-1/2">
+    <div className="flex h-full items-center justify-center mb-24">
+      <div className="grid bg-white rounded-lg mt-40 shadow-xl w-11/12 md:w-9/12 lg:w-1/2">
         <div className="flex justify-center">
           <div className="flex">
             <h1 className="text-gray-600 font-bold mt-7 md:text-2xl text-xl ">
-              Publicar Propiedad (propietarios)
+              Socilitar Propiedad (usuarios)
             </h1>
           </div>
         </div>
