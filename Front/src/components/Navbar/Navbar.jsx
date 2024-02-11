@@ -2,7 +2,6 @@ import { useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { BsPersonCircle } from "react-icons/bs";
 import { BsWhatsapp } from "react-icons/bs";
-import FormLogin from "../../pages/FormLogin";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
