@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
 const FormLogin = () => {
-    return (
-        <div className="flex items-center flex-col mb-10">
+  return (
+    <div className="flex items-center flex-col mb-10">
       <div className="max-w-lg mx-auto bg-white p-8 rounded-xl shadow shadow-orange-300 mt-40">
-        <h1 className="text-4xl font-medium mb-3 ">Login</h1 >
+        <h1 className="text-4xl font-medium mb-3 ">Login</h1>
         <p className="text-orange-500">
           Hola, Bienvenido a Mercado Inmobiliario 👋
         </p>
-  
+
         <div className="my-5">
           <button className="w-full text-center py-3 my-3 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg text-black-700 hover:border-orange-400 hover:text-orange-700 hover:shadow transition duration-150">
             <img
@@ -22,7 +22,9 @@ const FormLogin = () => {
         <form action="" className="my-10">
           <div className="flex flex-col space-y-5">
             <label htmlFor="email">
-              <p className="font-medium text-orange-700 pb-2">Ingrese su Email</p>
+              <p className="font-medium text-orange-700 pb-2">
+                Ingrese su Email
+              </p>
               <input
                 id="email"
                 name="email"
@@ -77,8 +79,8 @@ const FormLogin = () => {
             </button>
             <p className="text-center">
               Todavia no estas Registrado?{" "}
-              <Link to= "/FormUsuario"
-               
+              <Link
+                to="/FormUsuario"
                 className="text-orange-700 font-medium inline-flex space-x-1 items-center"
               >
                 <span>Registrese Ahora </span>
@@ -104,7 +106,7 @@ const FormLogin = () => {
         </form>
       </div>
       <div className="flex justify-center">
-      <a
+        <a
           href="/"
           type="button"
           className=" flex justify-center w-full inlineBlock rounded bg-orange-500 mt-[51px] mb-4
@@ -115,8 +117,8 @@ const FormLogin = () => {
           Volver
         </a>
       </div>
-      </div>
-    );
-  };
-  
-  export default FormLogin;
+    </div>
+  );
+};
+
+export default FormLogin;
