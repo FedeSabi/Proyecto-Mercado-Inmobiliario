@@ -22,35 +22,38 @@ const DetalleInmuebles = () => {
   const selectThumbnail = (index) => {
     setCurrentIndex(index);
   };
-
+  
   return (
     <div>
-      <div className="w-[50vw] h-[20%] ">
-        <div className="h-[3vh]"></div>
-        <div className="flex justify-between items-end h-[20vh]">
-          <div>
-            <h1 className=" ml-[50px] text-orange-500 text-sm md:text-lg lg:text-xl xl:text-1xl">
+      <div className=" h-[20%] ">
+        <div className="flex justify-center items-end h-[25vh] ">
+          <div className=" h-[48px] ml-[5%] ">
+            <h1 className=" text-orange-500  text-sm md:text-lg lg:text-xl xl:text-1xl">
               CASA EN VENTA RESIDENCIAL - VILLA NUEVA
             </h1>
           </div>
-          <div>
-            <h1 className="text-orange-500 text-sm md:text-lg lg:text-xl xl:text-1xl">
-              VENTA
-            </h1>
+          <div className="ml-[20%] w-[20%]">
+            <div className="mt-4 ">
+              <h1 className=" text-orange-500 text-sm md:text-lg lg:text-xl xl:text-1xl">
+                VENTA
+              </h1>
+            </div>
+            <div className="">
+              <h1 className=" text-green-500 text-sm md:text-lg lg:text-xl xl:text-1xl">
+                U$D 110.000
+              </h1>
+            </div>
           </div>
         </div>
-        <h1 className="w-[50vw] flex justify-end text-green-500 text-sm md:text-lg lg:text-xl xl:text-1xl">
-          U$D 110.000
-        </h1>
       </div>
 
-      <div className="flex flex-wrap ml-10">
-        <div className="flex flex-col">
-          <div className="h-[65vh] p-3 relative w-[50vw] ">
+      <div className="flex flex-wrap mr-[10px] justify-center ">
+        <div className="flex flex-col  ]">
+          <div className="h-[65vh] p-3 relative ">
             <img
               src={images[currentIndex]}
               alt={`Slide ${currentIndex + 1}`}
-              className="w-full h-full object-cover rounded-lg"
+              className="w-[100vh] h-full object-cover rounded-lg"
             />
             <button
               onClick={prevSlide}
@@ -82,8 +85,8 @@ const DetalleInmuebles = () => {
           </div>
         </div>
 
-        <div className=" flex justify-start mb-[20px]  ml-[8%] ">
-          <div className="flex flex-col justify-center max-w-lg bg-white p-8 rounded-xl shadow shadow-orange-300 ] h-[70vh] w-[90vw] mr-[8%]">
+        <div className=" flex justify-start mb-[20px] mt-10 ml-[8%] ">
+          <div className="flex flex-col justify-center max-w-lg bg-white p-8 rounded-xl shadow shadow-orange-300 ] h-[80vh] w-[90vw] mr-[8%]">
             <form action="">
               <div className="flex flex-col space-y-5">
                 <label htmlFor="email">
@@ -176,7 +179,7 @@ const DetalleInmuebles = () => {
         <a
           href="/"
           type="button"
-          className=" flex justify-center  inline-block rounded bg-orange-500 mt-[50px] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+          className=" flex justify-center  inlineBlock rounded bg-orange-500 mt-[50px] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
           data-te-ripple-init
           data-te-ripple-color="light"
         >
