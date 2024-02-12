@@ -5,8 +5,8 @@ import Carousel from "react-multi-carousel";
 import "/styles.css";
 import "react-multi-carousel/lib/styles.css";
 import imagen1 from "../assets/img/bernard-1.jpg";
-import imagen2 from "../assets/img/chris-curry-1.jpg";
-import imagen3 from "../assets/img/chris-curry-2.jpg";
+import house2 from "../assets/img/house2.jpg";
+import house1 from "../assets/img/house1.jpg";
 
 // Importa tu componente de Card
 const Card = ({ id, title, imageSrc }) => (
@@ -176,8 +176,8 @@ const Inmuebles = () => {
 
   const cardData = [
     { id: 1, title: "Card 10", imageSrc: `${imagen1}` },
-    { id: 2, title: "Card 2", imageSrc: `${imagen2}` },
-    { id: 3, title: "Card 3", imageSrc: `${imagen3}` },
+    { id: 2, title: "Card 2", imageSrc: `${house2}` },
+    { id: 3, title: "Card 3", imageSrc: `${house1}` },
     // Agrega el resto de las tarjetas según sea necesario
   ];
 

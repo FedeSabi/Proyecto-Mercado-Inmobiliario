@@ -1,3 +1,6 @@
+import house3 from '../assets/img/house3.jpg'
+import house6 from '../assets/img/house6.jpg'
+import house2 from '../assets/img/house2.jpg'
 const CardsPropiedades = () => {
   return (
     <>
@@ -19,7 +22,7 @@ const CardsPropiedades = () => {
               <div className="relative flex h-60 justify-center overflow-hidden rounded-lg">
                 <div className="w-full transform transition-transform duration-500 ease-in-out hover:scale-110">
                   <img
-                    src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    src={house6}
                     alt=""
                   />
                 </div>
@@ -156,7 +159,7 @@ const CardsPropiedades = () => {
               <div className="relative flex h-60 justify-center overflow-hidden rounded-lg">
                 <div className="w-full transform transition-transform duration-500 ease-in-out hover:scale-110">
                   <img
-                    src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    src={house3}
                     alt=""
                   />
                 </div>
@@ -294,7 +297,7 @@ const CardsPropiedades = () => {
               <div className="relative flex h-60 justify-center overflow-hidden rounded-lg">
                 <div className="w-full transform transition-transform duration-500 ease-in-out hover:scale-110">
                   <img
-                    src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    src={house2}
                     alt=""
                   />
                 </div>
