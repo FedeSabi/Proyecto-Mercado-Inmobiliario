@@ -5,8 +5,6 @@ import { BsWhatsapp } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
- 
-
   const [menuVisible, setMenuVisible] = useState(false);
 
   const toggleMenu = () => {
@@ -31,50 +29,52 @@ const Navbar = () => {
             }`}
           >
             <li>
-              <a
+              <Link
+                to={"/Inmuebles"}
                 className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl"
-                href="/Inmuebles"
               >
                 Inmuebles
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
+                to={"/FormCorretor"}
                 className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl"
-                href="/FormCorretor"
               >
                 Corredores
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
+                to={"/FormConstrutora"}
                 className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl"
-                href="/FormConstrutora"
               >
                 Constructoras
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
+                to={"/Nosotros"}
                 className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl"
-                href="/Nosotros"
               >
                 Nosotros
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
+                to={"/Contacto"}
                 className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl"
-                href="/Contacto"
               >
                 Contactos
-              </a>
+              </Link>
             </li>
-            
           </ul>
 
           <div className="hidden xl:flex items-center space-x-5 mr-[20px]">
-            <a className="hover:text-gray-500 text-orange-500" href="https://www.facebook.com/">
+            <a
+              className="hover:text-gray-500 text-orange-500"
+              href="https://www.facebook.com/"
+            >
               <FaFacebook size={30} />
             </a>
             <a
@@ -91,14 +91,10 @@ const Navbar = () => {
             </a>
 
             <Link to="/FormLogin">
-            <a
-              className="flex items-center hover:text-gray-500 text-orange-500"
-             >
-              <BsPersonCircle size={30} />
-            </a>
+              <a className="flex items-center hover:text-gray-500 text-orange-500">
+                <BsPersonCircle size={30} />
+              </a>
             </Link>
-            
-            
           </div>
         </div>
 
@@ -149,14 +145,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-          <Link to="/Contacto" className="hover:text-gray-200">
+            <Link to="/Contacto" className="hover:text-gray-200">
               Contacto
             </Link>
           </li>
-          
         </ul>
       </nav>
-    
     </div>
   );
 };
