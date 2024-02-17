@@ -1,9 +1,13 @@
 
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import axios from 'axios'
 
 const FormLogin = () => {
-  const [values, setValues] = useState({});
+ /* const [values, setValues] = useState({
+    email:" ",
+  password:" "
+});
   console.log(values);
 
   useEffect(() => {
@@ -18,8 +22,43 @@ const FormLogin = () => {
   };
 
   const handleClickButton = () =>{
-    console.log(values)
+    axios.post('http://localhost:3000/login', values)
+    .then(response => {
+      console.log(response.data)
+    })
+    .catch(error =>{
+      console.error(error)
+    })
   }
+*/
+ 
+//segundo codigo y ultimo usado que no funcionaba //
+
+const  [body, setBody] = useState({
+   email: '',
+   password: ''
+})
+ 
+const inputChange=({ target }) =>{
+const {name, value} = target
+setBody({
+  ...body, [name]:value
+})
+}
+
+const onSubmit = () => {
+  axios.post('http://localhost:3000/api/login', body)
+    .then((response) => {
+      if (response && response.data) {
+        console.log(response.data);
+      } else {
+        console.log("Error: No se recibió una respuesta del servidor.");
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
 
   return (
     <div className="flex items-center flex-col mb-10">
@@ -51,7 +90,8 @@ const FormLogin = () => {
                 type="email"
                 className="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-orange-500 hover:shadow"
                 placeholder="Ingrese su Email"
-                onChange={handleChangeValues}
+                value={body.email}
+                onChange={inputChange}
               />
             </label>
             <label htmlFor="password">
@@ -62,7 +102,8 @@ const FormLogin = () => {
                 type="password"
                 className="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-orange-500 hover:shadow"
                 placeholder="Ingrese su Contraseña"
-                onChange={handleChangeValues}
+                value={body.password}
+                onChange={inputChange}
               />
             </label>
             <div className="flex flex-row justify-between">
@@ -72,7 +113,7 @@ const FormLogin = () => {
                     type="checkbox"
                     id="remember"
                     className="w-4 h-4 border-slate-200 focus:ring-orange-700 accent-orange-600"
-                    onChange={handleChangeValues}
+      
                   />
                   Recordar Contraseña
                 </label>
@@ -83,7 +124,7 @@ const FormLogin = () => {
                 </Link>
               </div>
             </div>
-            <button className="w-full py-3 font-medium text-white bg-orange-600 hover:bg-orange-400 rounded-lg border-orange-400 hover:shadow inline-flex space-x-2 items-center justify-center" onClick={handleClickButton}>
+            <button className="w-full py-3 font-medium text-white bg-orange-600 hover:bg-orange-400 rounded-lg border-orange-400 hover:shadow inline-flex space-x-2 items-center justify-center" onClick={onSubmit}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -145,4 +186,5 @@ const FormLogin = () => {
 };
 
 export default FormLogin;
+
 
