@@ -1,10 +1,9 @@
-
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { useState } from "react";
-import axios from 'axios'
+import axios from "axios";
 
 const FormLogin = () => {
- /* const [values, setValues] = useState({
+  /* const [values, setValues] = useState({
     email:" ",
   password:" "
 });
@@ -31,34 +30,36 @@ const FormLogin = () => {
     })
   }
 */
- 
-//segundo codigo y ultimo usado que no funcionaba //
 
-const  [body, setBody] = useState({
-   email: '',
-   password: ''
-})
- 
-const inputChange=({ target }) =>{
-const {name, value} = target
-setBody({
-  ...body, [name]:value
-})
-}
+  //segundo codigo y ultimo usado que no funcionaba //
 
-const onSubmit = () => {
-  axios.post('http://localhost:3000/api/login', body)
-    .then((response) => {
-      if (response && response.data) {
-        console.log(response.data);
-      } else {
-        console.log("Error: No se recibió una respuesta del servidor.");
-      }
-    })
-    .catch((error) => {
-      console.error(error);
+  const [body, setBody] = useState({
+    email: "",
+    password: "",
+  });
+
+  const inputChange = ({ target }) => {
+    const { name, value } = target;
+    setBody({
+      ...body,
+      [name]: value,
     });
-};
+  };
+
+  const onSubmit = () => {
+    axios
+      .post("http://localhost:4000/login", body)
+      .then((response) => {
+        if (response && response.data) {
+          console.log(response.data);
+        } else {
+          console.log("Error: No se recibió una respuesta del servidor.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error en la solicitud:", error);
+      });
+  };
 
   return (
     <div className="flex items-center flex-col mb-10">
@@ -113,7 +114,6 @@ const onSubmit = () => {
                     type="checkbox"
                     id="remember"
                     className="w-4 h-4 border-slate-200 focus:ring-orange-700 accent-orange-600"
-      
                   />
                   Recordar Contraseña
                 </label>
@@ -124,7 +124,10 @@ const onSubmit = () => {
                 </Link>
               </div>
             </div>
-            <button className="w-full py-3 font-medium text-white bg-orange-600 hover:bg-orange-400 rounded-lg border-orange-400 hover:shadow inline-flex space-x-2 items-center justify-center" onClick={onSubmit}>
+            <button
+              className="w-full py-3 font-medium text-white bg-orange-600 hover:bg-orange-400 rounded-lg border-orange-400 hover:shadow inline-flex space-x-2 items-center justify-center"
+              onClick={onSubmit}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -186,5 +189,3 @@ const onSubmit = () => {
 };
 
 export default FormLogin;
-
-
