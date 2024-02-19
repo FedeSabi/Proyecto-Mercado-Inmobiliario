@@ -4,11 +4,6 @@ import axios from "axios";
 const FormCorretor = () => {
 
   const [corredor, setCorredor] = useState({
-    Nombre: "",
-    Apellido: "",
-    Email: "",
-    contraseña: "",
-    confirmar_contraseña: "",
     telefono: "",
     instagram: "",
     facebook: "",
@@ -18,7 +13,8 @@ const FormCorretor = () => {
     direccion: "",
     descripcion: "",
     inmobiliaria: "",
-    web:""
+    web:"",
+    imagenes:""
   });
 
   const inputChange = ({ target }) => {
@@ -156,7 +152,7 @@ const FormCorretor = () => {
                   id="remember"
                   className="w-4 h-4 border-slate-200 accent-orange-600 "
                 />
-                Autorizo a mostrar sus datos de contaro en las redes
+                Autorizo a mostrar sus datos de contatro en las redes
               </label>
             </div>
             <button
