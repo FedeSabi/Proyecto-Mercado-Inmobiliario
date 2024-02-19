@@ -9,7 +9,16 @@ const FormCorretor = () => {
     Email: "",
     contraseña: "",
     confirmar_contraseña: "",
-    Telefono: "",
+    telefono: "",
+    instagram: "",
+    facebook: "",
+    cuit: "",
+    matricula_corredor: "",
+    ciudad: "",
+    direccion: "",
+    descripcion: "",
+    inmobiliaria: "",
+    web:""
   });
 
   const inputChange = ({ target }) => {
@@ -22,7 +31,7 @@ const FormCorretor = () => {
 
   const onSubmit = () => {
     axios
-      .post("http://localhost:4000/registrarse", persona)
+      .post("http://localhost:4000/corredor", corredor)
       .then((response) => {
         if (response && response.data) {
           console.log(response.data);
@@ -50,60 +59,93 @@ const FormCorretor = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 ">
               <input
                 type="text"
+                name="instagram"
                 placeholder="Instagram"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
+                value={corredor.instagram}
+                onChange={inputChange}
               />
               <input
                 type="text"
+                name="facebook"
                 placeholder="Facebook"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none" 
+                value={corredor.facebook}
+                onChange={inputChange}
               />
               <input
                 type="text"
-                placeholder="CNPJ"
+                name="cuit"
+                placeholder="Cuit"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
+                value={corredor.cuit}
+                onChange={inputChange}
               />
               <input
                 type="text"
-                placeholder="Creci"
+                name="matricula_corredor"
+                placeholder="Matricula Corredor"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
+                value={corredor.matricula_corredor}
+                onChange={inputChange}
               />
               <input
                 type="text"
+                name="ciudad"
                 placeholder="Ciudad"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
+                value={corredor.ciudad}
+                onChange={inputChange}
               />
               <input
                 type="text"
-                placeholder="Endereco"
+                name="direccion"
+                placeholder="Direccion"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
+                value={corredor.direccion}
+                onChange={inputChange}
               />
               <input
                 type="text"
+                name="descripcion"
                 placeholder="Descripcion"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
+                value={corredor.descripcion}
+                onChange={inputChange}
               />
               <input
                 type="phone"
+                name="telefono"
                 placeholder="Telefono"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
+                value={corredor.telefono}
+                onChange={inputChange}
               />
               <input
                 type="text"
+                name="inmobilaria"
                 placeholder="Inmobiliaria"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
+                value={corredor.inmobiliaria}
+                onChange={inputChange}
               />
               <input
                 type="text"
+                name="web"
                 placeholder="web"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
+                value={corredor.web}
+                onChange={inputChange}
               />
               <div>
                 <p className="mb-3 text-black-700 text-md">Subir Imagenes</p>
                 <input
                   type="file"
+                  name="imagenes"
                   placeholder="subir imagenes"
                   className="border p-2 rounded w-full border-orange-600 focus:outline-none"
+                  value={corredor.imagenes}
+                  onChange={inputChange}
                 />
               </div>
             </div>
@@ -121,6 +163,7 @@ const FormCorretor = () => {
               type="button"
               id="theme-toggle"
               className="px-4 py-2 rounded bg-orange-600 text-white hover:bg-orange-300 focus:outline-none transition-colors"
+              onClick={onSubmit}
             >
               Enviar
             </button>
