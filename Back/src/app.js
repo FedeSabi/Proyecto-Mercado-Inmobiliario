@@ -5,6 +5,7 @@ import { PORT } from "./config.js";
 import cors from "cors";
 import registrarse from "../routes/routes_registrarse.js"
 import corredor from "../routes/routes_corredor.js"
+import constructora from "../routes/routes_constructora.js"
 
 const app = express();
 
@@ -16,6 +17,9 @@ app.use("/", registrarse);
 
 // enrutador "corredor" en la ruta principal de la aplicacion
 app.use("/", corredor);
+
+// enrutador "corredor" en la ruta principal de la aplicacion
+app.use("/", constructora);
 
 const puerto = PORT;
 app.listen(puerto, () => {

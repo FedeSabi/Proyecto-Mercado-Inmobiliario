@@ -6,6 +6,7 @@ const FormCorretor = () => {
     telefono: "",
     instagram: "",
     facebook: "",
+    direccion_web: "",
     cuit: "",
     matricula_corredor: "",
     ciudad: "",
@@ -13,7 +14,7 @@ const FormCorretor = () => {
     descripcion: "",
     inmobiliaria: "",
     imagenes: ""
-  });
+  }); 
 
   const inputChange = ({ target }) => {
     const { name, value } = target;
@@ -65,6 +66,14 @@ const FormCorretor = () => {
                 placeholder="Facebook"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
                 value={corredor.facebook}
+                onChange={inputChange}
+              />
+               <input
+                type="text"
+                name="direccion_web"
+                placeholder="Direccion_web"
+                className="border p-2 rounded w-full border-orange-600 focus:outline-none"
+                value={corredor.direccion_web}
                 onChange={inputChange}
               />
               <input
