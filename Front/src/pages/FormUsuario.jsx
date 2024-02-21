@@ -14,8 +14,8 @@ const FormUsuario = () => {
     Nombre: "",
     Apellido: "",
     Email: "",
-    contraseña: "",
-    confirmar_contraseña: "",
+    password: "",
+    confirmar_password: "",
     Telefono: "",
   });
 
@@ -103,7 +103,7 @@ const FormUsuario = () => {
                   />
                   <input
                     type="password"
-                    name="contraseña"
+                    name="password"
                     placeholder="Contraseña"
                     className="border p-2 rounded w-full border-orange-600 focus:outline-none"
                     value={persona.contraseña}
@@ -111,7 +111,7 @@ const FormUsuario = () => {
                   />
                   <input
                     type="password"
-                    name="confirmar_contraseña"
+                    name="confirmar_password"
                     placeholder="Confirmar Contraseña"
                     className="border p-2 rounded w-full border-orange-600 focus:outline-none"
                     value={persona.confirmar_contraseña}

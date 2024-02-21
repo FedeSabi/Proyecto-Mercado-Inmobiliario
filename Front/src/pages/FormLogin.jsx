@@ -1,70 +1,40 @@
+
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
 const FormLogin = () => {
-  /* const [values, setValues] = useState({
-    email:" ",
-  password:" "
-});
-  console.log(values);
-
-  useEffect(() => {
-    console.log(values);
-  }, [values]); // Este efecto se ejecutará cada vez que 'values' cambie
-
-  const handleChangeValues = (value) => {
-    setValues((preValue) => ({
-      ...preValue,
-      [value.target.name]: value.target.value,
-    }));
-  };
-
-  const handleClickButton = () =>{
-    axios.post('http://localhost:3000/login', values)
-    .then(response => {
-      console.log(response.data)
-    })
-    .catch(error =>{
-      console.error(error)
-    })
-  }
-*/
-
-  //segundo codigo y ultimo usado que no funcionaba //
-
-  const [body, setBody] = useState({
+  const [login, setLogin] = useState({
     email: "",
     password: "",
   });
 
-  const inputChange = ({ target }) => {
-    const { name, value } = target;
-    setBody({
-      ...body,
+  const inputChange = (event) => {
+    const { name, value } = event.target;
+    setLogin((prevLogin) => ({
+      ...prevLogin,
       [name]: value,
-    });
+    }));
   };
 
-  const onSubmit = () => {
-    axios
-      .post("http://localhost:4000/login", body)
-      .then((response) => {
-        if (response && response.data) {
-          console.log(response.data);
-        } else {
-          console.log("Error: No se recibió una respuesta del servidor.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error en la solicitud:", error);
-      });
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:4000/login", login);
+      if (response && response.data) {
+        console.log(response.data);
+      } else {
+        console.log("Error: No se recibió una respuesta del servidor.");
+      }
+    } catch (error) {
+      console.error("Error en la solicitud:", error);
+    }
   };
 
   return (
     <div className="flex items-center flex-col mb-10">
       <div className="max-w-lg mx-auto bg-white p-8 rounded-xl shadow shadow-orange-300 mt-40">
-        <h1 className="text-4xl font-medium mb-3 ">Login</h1>
+        <h1 className="text-4xl font-medium mb-3">Login</h1>
         <p className="text-orange-500">
           Hola, Bienvenido a Mercado Inmobiliario 👋
         </p>
@@ -79,7 +49,7 @@ const FormLogin = () => {
             <span>Login con Google</span>
           </button>
         </div>
-        <form action="" className="my-10">
+        <form onSubmit={onSubmit} className="my-10">
           <div className="flex flex-col space-y-5">
             <label htmlFor="email">
               <p className="font-medium text-orange-700 pb-2">
@@ -91,7 +61,7 @@ const FormLogin = () => {
                 type="email"
                 className="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-orange-500 hover:shadow"
                 placeholder="Ingrese su Email"
-                value={body.email}
+                value={login.email}
                 onChange={inputChange}
               />
             </label>
@@ -103,7 +73,7 @@ const FormLogin = () => {
                 type="password"
                 className="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-orange-500 hover:shadow"
                 placeholder="Ingrese su Contraseña"
-                value={body.password}
+                value={login.password}
                 onChange={inputChange}
               />
             </label>
@@ -125,8 +95,8 @@ const FormLogin = () => {
               </div>
             </div>
             <button
+              type="submit"
               className="w-full py-3 font-medium text-white bg-orange-600 hover:bg-orange-400 rounded-lg border-orange-400 hover:shadow inline-flex space-x-2 items-center justify-center"
-              onClick={onSubmit}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -145,12 +115,12 @@ const FormLogin = () => {
               <span>Login</span>
             </button>
             <p className="text-center">
-              Todavia no estas Registrado?{" "}
+              Todavía no estás Registrado?{" "}
               <Link
                 to={"/FormUsuario"}
                 className="text-orange-700 font-medium inline-flex space-x-1 items-center"
               >
-                <span>Registrese Ahora </span>
+                <span>Regístrese Ahora </span>
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -175,9 +145,7 @@ const FormLogin = () => {
       <div className="flex justify-center">
         <Link
           to={"/"}
-          type="button"
-          className=" flex justify-center w-full inlineBlock rounded bg-orange-500 mt-[51px] mb-4
-           px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+          className="flex justify-center w-full inlineBlock rounded bg-orange-500 mt-[51px] mb-4 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0 4px 9px -4px #3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0 8px 9px -4px rgba(59,113,202,0.3),0 4px 18px 0 rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0 8px 9px -4px rgba(59,113,202,0.3),0 4px 18px 0 rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0 8px 9px -4px rgba(59,113,202,0.3),0 4px 18px 0 rgba(59,113,202,0.2)] dark:shadow-[0 4px 9px -4px rgba(59,113,202,0.5)] dark:hover:shadow-[0 8px 9px -4px rgba(59,113,202,0.2),0 4px 18px 0 rgba(59,113,202,0.1)] dark:focus:shadow-[0 8px 9px -4px rgba(59,113,202,0.2),0 4px 18px 0 rgba(59,113,202,0.1)] dark:active:shadow-[0 8px 9px -4px rgba(59,113,202,0.2),0 4px 18px 0 rgba(59,113,202,0.1)]"
           data-te-ripple-init
           data-te-ripple-color="light"
         >
