@@ -4,15 +4,15 @@ import axios from "axios";
 const FormCorretor = () => {
   const [corredor, setCorredor] = useState({
     telefono: "",
-    instagram: "",
-    facebook: "",
+    email: "",
+    password: "",
     direccion_web: "",
     cuit: "",
     matricula_corredor: "",
     ciudad: "",
     direccion: "",
     descripcion: "",
-    inmobiliaria: "",
+    nombre_completo: "",
     imagenes: ""
   }); 
 
@@ -53,19 +53,19 @@ const FormCorretor = () => {
           <form>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 ">
               <input
-                type="text"
-                name="instagram"
-                placeholder="Instagram"
+                type="email"
+                name="email"
+                placeholder="Correo Electronico"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
-                value={corredor.instagram}
+                value={corredor.email}
                 onChange={inputChange}
               />
               <input
-                type="text"
-                name="facebook"
-                placeholder="Facebook"
+                type="password"
+                name="password"
+                placeholder="Contraseña"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
-                value={corredor.facebook}
+                value={corredor.password}
                 onChange={inputChange}
               />
                <input
@@ -126,10 +126,10 @@ const FormCorretor = () => {
               />
               <input
                 type="text"
-                name="inmobiliaria"
-                placeholder="Inmobiliaria"
+                name="nombre_completo"
+                placeholder="Nombre Completo"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
-                value={corredor.inmobiliaria}
+                value={corredor.nombre_completo}
                 onChange={inputChange}
               />
               <div>

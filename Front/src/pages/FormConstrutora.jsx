@@ -4,15 +4,15 @@ import axios from "axios";
 const FormConstrutora = () => {
   const [constructora, setConstructora] = useState({
     telefono: "",
-    instagram: "",
-    facebook: "",
+    email: "",
+    password: "",
     direccion_web: "",
     cuit: "",
     matricula_constructora: "",
     ciudad: "",
     direccion: "",
     descripcion: "",
-    constructora: "",
+    nombre_empresa: "",
     imagenes: "",
   });
 
@@ -52,19 +52,19 @@ const FormConstrutora = () => {
           <form>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 ">
               <input
-                type="text"
-                placeholder="Instagram"
-                name="instagram"
+                type="email"
+                placeholder="Email"
+                name="email"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
-                value={constructora.instagram}
+                value={constructora.email}
                 onChange={inputChange}
               />
               <input
-                type="text"
-                placeholder="Facebook"
-                name="facebook"
+                type="password"
+                placeholder="Contraseña"
+                name="password"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
-                value={constructora.facebook}
+                value={constructora.password}
                 onChange={inputChange}
               />
               <input
@@ -118,10 +118,10 @@ const FormConstrutora = () => {
               />
               <input
                 type="text"
-                placeholder="Constructora"
-                name="constructora"
+                placeholder="Nombre Empresa"
+                name="nombre_empresa"
                 className="border p-2 rounded w-full border-orange-600 focus:outline-none"
-                value={constructora.constructora}
+                value={constructora.nombre_empresa}
                 onChange={inputChange}
               />
               <input
