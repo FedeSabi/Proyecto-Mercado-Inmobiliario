@@ -1,9 +1,10 @@
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
 const FormLogin = () => {
+  const navigate = useNavigate()
   const [login, setLogin] = useState({
     email: "",
     password: "",
@@ -23,6 +24,9 @@ const FormLogin = () => {
       const response = await axios.post("http://localhost:4000/login", login);
       if (response && response.data) {
         console.log(response.data);
+      if (response.data.success) {   //agregamos el navigate para acceder una vez realizado el login pasar al administrador
+        navigate('/Administrador')
+      }  
       } else {
         console.log("Error: No se recibió una respuesta del servidor.");
       }

@@ -13,6 +13,7 @@ import FormConstrutora from "./pages/FormConstrutora.jsx";
 import Contacto from "./pages/Contacto.jsx";
 import Nosotros from "./pages/Nosotros.jsx";
 import { DetalleInmuebles } from "./pages/DetalleInmuebles.jsx";
+import AdmLogin from './administrador/AdmLogin.jsx'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/FormConstrutora" element={<FormConstrutora />} />
           <Route path="/Nosotros" element={<Nosotros />} />
           <Route path="/CardsPropiedades" element={<CardsPropiedades />} />
+          <Route path="/AdmLogin" element={<AdmLogin />} />
           <Route
             path="/InmuebleFormPersona"
             element={<InmuebleFormPersona />}
