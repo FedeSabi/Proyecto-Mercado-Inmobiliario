@@ -14,6 +14,7 @@ import Contacto from "./pages/Contacto.jsx";
 import Nosotros from "./pages/Nosotros.jsx";
 import { DetalleInmuebles } from "./pages/DetalleInmuebles.jsx";
 import AdmLogin from './administrador/AdmLogin.jsx'
+import Administrador from "./pages/Administrador.jsx";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/Nosotros" element={<Nosotros />} />
           <Route path="/CardsPropiedades" element={<CardsPropiedades />} />
           <Route path="/AdmLogin" element={<AdmLogin />} />
+          <Route path="/Administrador" element={<Administrador />} />
           <Route
             path="/InmuebleFormPersona"
             element={<InmuebleFormPersona />}

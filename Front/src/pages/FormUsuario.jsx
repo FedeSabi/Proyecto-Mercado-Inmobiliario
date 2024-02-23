@@ -118,7 +118,7 @@ const FormUsuario = () => {
                     onChange={inputChange}
                   />
                   <input
-                    type="number"
+                    type="phone"
                     name="Telefono"
                     placeholder="Telefono"
                     className="border p-2 rounded w-full border-orange-600 focus:outline-none"
