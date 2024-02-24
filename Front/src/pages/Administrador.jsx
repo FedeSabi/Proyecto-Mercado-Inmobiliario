@@ -12,21 +12,21 @@ const Administrador = () => {
           Ingrese a una Base de Datos
         </p>
         <Link
-          to="#"
+          to="/AdmUsuario"
           className="block w-full h-12 rounded-lg bg-orange-400 text-gray-200 uppercase font-semibold hover:bg-orange-600 transition mb-4 text-center"
           style={{ lineHeight: "2.5rem" }}
         >
           Base de datos usuarios
         </Link>
         <Link
-          to="#"
+          to="/AdmCorredor"
           className="block w-full h-12 rounded-lg bg-orange-600 text-gray-200 uppercase font-semibold hover:bg-orange-700 transition mb-4 text-center"
           style={{ lineHeight: "2.5rem" }}
         >
           Base de datos corredores
         </Link>
         <Link
-          to="#"
+          to="/AdmConstructora"
           className="block w-full h-12 rounded-lg bg-orange-700 text-gray-200 uppercase font-semibold hover:bg-orange-800  transition mb-4 text-center"
           style={{ lineHeight: "2.5rem" }}
         >

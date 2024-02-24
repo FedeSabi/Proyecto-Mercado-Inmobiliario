@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { FaRankingStar } from "react-icons/fa6";
 import { FcFactory } from "react-icons/fc";
@@ -248,3 +249,4 @@ const Inmuebles = () => {
 };
 
 export { Inmuebles };
+
