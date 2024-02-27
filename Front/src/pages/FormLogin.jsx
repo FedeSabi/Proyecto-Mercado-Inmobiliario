@@ -22,11 +22,9 @@ const FormLogin = () => {
     event.preventDefault();
     try {
       const response = await axios.post("http://localhost:4000/login", login);
-      if (response && response.data) {
-        console.log(response.data);
-        if (response.data.success) {   //agregamos el navigate para acceder una vez realizado el login pasar al administrador
-          navigate('/Administrador');
-        }
+      if (response && response.data && response.data.token) {
+        localStorage.setItem('token', response.data.token) //guarda el token en el almacenamiento local
+          navigate('/Administrador'); // Redirige al usuario al componente  Administrador
       } else {
         console.log("Error: No se recibió una respuesta del servidor.");
       }
