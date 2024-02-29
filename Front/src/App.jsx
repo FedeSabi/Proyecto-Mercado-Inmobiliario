@@ -18,15 +18,29 @@ import Administrador from "./pages/Administrador.jsx";
 import AdmUsuario from "./administrador/AdmUsuario.jsx";
 import AdmCorredor from "./administrador/AdmCorredor.jsx";
 import AdmConstructora from "./administrador/AdmConstructora.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import { useLocalStorage } from 'react-use'
 
 function App() {
+// creamos un hook para que si esta registrado pueda acceder a las secciones protegidas!!
+const [token] = useLocalStorage('token')
+if (token === true) {
+  // Haz algo con el token aquí, por ejemplo, mostrarlo o utilizarlo en alguna lógica
+  console.log('El token es verdadero:', token);
+} else {
+  // Si el token no es true, puedes manejarlo de acuerdo a tus necesidades,
+  // como mostrar un mensaje de error o ejecutar alguna otra lógica
+  console.log('El token no es verdadero:', token);
+}
   return (
     <>
       <Router>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Inmuebles" element={<Inmuebles />} />
+          <Route element={<ProtectedRoute canActivate={token} redirectPath="/FormLogin"/>}>
+              <Route path="/Inmuebles" element={<Inmuebles />} />
+          </Route>
           <Route path="/DetalleInmuebles" element={<DetalleInmuebles />} />
           <Route path="/FormLogin" element={<FormLogin />} />
           <Route path="/FormUsuario" element={<FormUsuario />} />

@@ -1,3 +1,4 @@
+//funciona direccionando al administrador a inmuebles no funciona si no ponemos en true al token!!
 
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -9,6 +10,8 @@ const FormLogin = () => {
     email: "",
     password: "",
   });
+
+  const [error, setError] = useState(null) // estado para el mensaje de error
 
   const inputChange = (event) => {
     const { name, value } = event.target;
@@ -23,10 +26,12 @@ const FormLogin = () => {
     try {
       const response = await axios.post("http://localhost:4000/login", login);
       if (response && response.data && response.data.token) {
-        localStorage.setItem('token', response.data.token) //guarda el token en el almacenamiento local
+        //convertir el token a una cadena Json y guardarlo en el alacenamiento local
+        localStorage.setItem('token', response.data.token) 
+      //guarda el token en el almacenamiento local
           navigate('/Administrador'); // Redirige al usuario al componente  Administrador
       } else {
-        console.log("Error: No se recibió una respuesta del servidor.");
+        setError("Credenciales invalidas", error);
       }
     } catch (error) {
       console.error("Error en la solicitud:", error);
@@ -159,3 +164,4 @@ const FormLogin = () => {
 };
 
 export default FormLogin;
+
