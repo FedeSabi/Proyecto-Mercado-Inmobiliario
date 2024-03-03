@@ -18,7 +18,7 @@ import Administrador from "./pages/Administrador.jsx";
 import AdmUsuario from "./administrador/AdmUsuario.jsx";
 import AdmCorredor from "./administrador/AdmCorredor.jsx";
 import AdmConstructora from "./administrador/AdmConstructora.jsx";
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
+//import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import { useLocalStorage } from 'react-use'
 
 function App() {
@@ -38,9 +38,7 @@ if (token === true) {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route element={<ProtectedRoute canActivate={token} redirectPath="/FormLogin"/>}>
-              <Route path="/Inmuebles" element={<Inmuebles />} />
-          </Route>
+          <Route path="/Inmuebles" element={<Inmuebles />} />
           <Route path="/DetalleInmuebles" element={<DetalleInmuebles />} />
           <Route path="/FormLogin" element={<FormLogin />} />
           <Route path="/FormUsuario" element={<FormUsuario />} />

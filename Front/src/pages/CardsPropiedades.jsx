@@ -6,7 +6,7 @@ const CardsPropiedades = () => {
     <>
     <div className=" grid items-end mb-20">
     <div className="h-[15vh]"></div>
-      <div className="">
+      <div className="mt-8">
         <h1 className="my-4 mx-4 text-left text-3xl">
           <b>Resultados de la busqueda</b>
         </h1>

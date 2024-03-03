@@ -29,7 +29,7 @@ const FormLogin = () => {
         //convertir el token a una cadena Json y guardarlo en el alacenamiento local
         localStorage.setItem('token', response.data.token) 
       //guarda el token en el almacenamiento local
-          navigate('/Administrador'); // Redirige al usuario al componente  Administrador
+          navigate('/'); // Redirige al usuario al componente  Administrador
       } else {
         setError("Credenciales invalidas", error);
       }
