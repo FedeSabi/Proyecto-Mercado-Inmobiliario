@@ -196,7 +196,7 @@ const Navbar = () => {
           >
             <li>
               <Link
-                to={"/Inmuebles"}
+                to={"/inmuebles"}
                 className="hover:text-gray-200 text-sm md:text-lg lg:text-xl xl:text-1xl"
               >
                 Inmuebles

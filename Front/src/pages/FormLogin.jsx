@@ -1,4 +1,3 @@
-//funciona direccionando al administrador a inmuebles no funciona si no ponemos en true al token!!
 
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -11,7 +10,7 @@ const FormLogin = () => {
     password: "",
   });
 
-  const [error, setError] = useState(null) // estado para el mensaje de error
+  const [error, setError] = useState(null); // estado para el mensaje de error
 
   const inputChange = (event) => {
     const { name, value } = event.target;
@@ -25,19 +24,26 @@ const FormLogin = () => {
     event.preventDefault();
     try {
       const response = await axios.post("http://localhost:4000/login", login);
-      if (response && response.data && response.data.token) {
-        //convertir el token a una cadena Json y guardarlo en el alacenamiento local
-        localStorage.setItem('token', response.data.token) 
-      //guarda el token en el almacenamiento local
-          navigate('/'); // Redirige al usuario al componente  Administrador
+      if (response && response.data) {
+        if (response.data.isAdmin) {
+          navigate("/administrador"); // Redirige al componente Administrador
+        } else if (response.data.isRegistrarse) {
+          //navigate('/componente-registrarse');
+          navigate("/UserPass") // Redirige a otro componente
+        } else if (response.data.isCorredor) {
+          navigate('/CorredorPass'); // Redirige al componente de Corredor
+        } else if (response.data.isConstructora) {
+          navigate('/ConstructoraPass'); // Redirige al componente de Constructora
+        } else {
+          setError("Credenciales inválidas");
+        }
       } else {
-        setError("Credenciales invalidas", error);
+        setError("Credenciales inválidas");
       }
     } catch (error) {
       console.error("Error en la solicitud:", error);
     }
   };
-
   return (
     <div className="flex items-center flex-col mb-10">
       <div className="max-w-lg mx-auto bg-white p-8 rounded-xl shadow shadow-orange-300 mt-40">
@@ -101,6 +107,7 @@ const FormLogin = () => {
                 </Link>
               </div>
             </div>
+            {error && <p className="text-red-500">{error}</p>}
             <button
               type="submit"
               className="w-full py-3 font-medium text-white bg-orange-600 hover:bg-orange-400 rounded-lg border-orange-400 hover:shadow inline-flex space-x-2 items-center justify-center"
@@ -164,4 +171,3 @@ const FormLogin = () => {
 };
 
 export default FormLogin;
-
