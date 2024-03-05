@@ -18,3 +18,5 @@ export const user_registrarse = async (req, res) => {
     res.status(500).send("Error interno del servidor");
   }
 };
+
+//editar un usuario de la base de datos
