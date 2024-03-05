@@ -1,25 +1,12 @@
-import express from "express";
-import { pool } from "../src/db.js";
+import express  from "express";
 
-const router = express.Router();
+import {user_registrarse} from '../controllers/controller_registrarse.js'
 
-//tabla registrarse
-router.post("/registrarse", async (req, res) => {
-  const persona = req.body;
-  try {
-    const connection = await pool.getConnection();
-    const [results, fields] = await connection.query(
-      "INSERT INTO registrarse SET ?",
-      [persona]
-    );
-    connection.release();
-    console.log("Usuario registrado con éxito");
-    res.send("Usuario registrado con éxito");
-  } catch (error) {
-    console.error("Error al insertar en la base de datos:", error);
-    res.status(500).send("Error interno del servidor");
-  }
-});
+const router = express.Router()
+
+router.post("/registrarse", user_registrarse)
+
+
 
 export default router;
 
