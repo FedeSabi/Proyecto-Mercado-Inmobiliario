@@ -15,9 +15,9 @@ import Contacto from "./pages/Contacto.jsx";
 import Nosotros from "./pages/Nosotros.jsx";
 import { DetalleInmuebles } from "./pages/DetalleInmuebles.jsx";
 import Administrador from "./pages/Administrador.jsx";
-import AdmUsuario from "./administrador/AdmUsuario.jsx";
-import AdmCorredor from "./administrador/AdmCorredor.jsx";
-import AdmConstructora from "./administrador/AdmConstructora.jsx";
+import AdmUsuario from "./pages/AdmUsuario.jsx";
+import AdmCorredor from "./pages/AdmCorredor.jsx";
+import AdmConstructora from "./pages/AdmConstructora.jsx";
 import UserPass from "./pages/UserPass.jsx";
 import CorredorPass from "./pages/CorredorPass.jsx";
 

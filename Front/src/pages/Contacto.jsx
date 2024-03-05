@@ -2,7 +2,7 @@ const Contacto = () => {
   return (
     <div className="flex items-center justify-center flex-col p-12">
       <div className="mx-auto w-full max-w-[550px] mt-28">
-        <form action="https://formbold.com/s/FORM_ID" method="POST">
+        <form action="https://mailbackend-6z8t.onrender.com/mail/6527fd554a0d07bc116c4f2c/formularioID/0" method="POST">
           <div className="mb-5">
             <label
               htmlFor="name"
