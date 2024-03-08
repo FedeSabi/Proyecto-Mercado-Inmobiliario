@@ -169,19 +169,20 @@ import { useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { BsJustify, BsPersonCircle, BsWhatsapp } from "react-icons/bs";
 
-const Navbar = () => {
+const Navbar = (loggedInUsername) => {
+
   const [menuVisible, setMenuVisible] = useState(false);
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
   };
 
+
   return (
     <div>
       <nav
-        className={`flex justify-between text-white bg-gray-900 bg-opacity-30 w-screen p-4 z-50 fixed ${
-          menuVisible ? "flex-col" : ""
-        }`}
+        className={`flex justify-between text-white bg-gray-900 bg-opacity-30 w-screen p-4 z-50 fixed ${menuVisible ? "flex-col" : ""
+          }`}
       >
         <div className="px-5 xl:px-12 py-2 flex w-full items-center">
           <Link className="text-3xl font-bold font-heading" to={"/"}>
@@ -190,9 +191,8 @@ const Navbar = () => {
           </Link>
 
           <ul
-            className={`hidden md:flex px-6 mx-auto font-semibold font-heading space-x-12 ${
-              menuVisible ? "hidden" : "flex"
-            }`}
+            className={`hidden md:flex px-6 mx-auto font-semibold font-heading space-x-12 ${menuVisible ? "hidden" : "flex"
+              }`}
           >
             <li>
               <Link
@@ -255,13 +255,31 @@ const Navbar = () => {
             >
               <BsWhatsapp size={30} />
             </Link>
+            {!loggedInUsername.loggedInUsername && (
+              <Link
+                to="/FormLogin"
+                className="flex items-center hover:text-gray-500 text-orange-500"
+              >
+                <BsPersonCircle size={30} />
 
-            <Link
-              to="/FormLogin"
-              className="flex items-center hover:text-gray-500 text-orange-500"
-            >
-              <BsPersonCircle size={30} />
-            </Link>
+              </Link>
+
+            )}
+            {loggedInUsername.loggedInUsername && (
+              <div>
+                <p className='text-orange-500 text-base sm:text-lg md:text-xl '>
+                  bienvenido!!
+                </p>
+
+                <div className='flex justify-center text-orange-500 text-base sm:text-lg md:text-xl ]'>
+                  {loggedInUsername.loggedInUsername}
+                </div>
+               <a href='/' className='text-orange-500 text-base sm:text-lg  ' >
+                Cerrar sesion
+               </a>
+              </div>
+
+            )}
           </div>
         </div>
 
@@ -275,9 +293,8 @@ const Navbar = () => {
         </Link>
 
         <ul
-          className={`md:hidden px-6 mx-auto font-semibold font-heading  ${
-            menuVisible ? "flex flex-col" : "hidden"
-          }`}
+          className={`md:hidden px-6 mx-auto font-semibold font-heading  ${menuVisible ? "flex flex-col" : "hidden"
+            }`}
         >
           <li>
             <Link to="/Inmuebles" className="hover:text-gray-200">

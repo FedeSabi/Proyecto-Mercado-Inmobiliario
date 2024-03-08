@@ -8,7 +8,7 @@ const router = express.Router();
 
 //tabla login
 router.post('/login', async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, nombre} = req.body;
 
   try {
     //consulta a la tabla de administradores
@@ -20,9 +20,10 @@ router.post('/login', async (req, res) => {
 
     // Consulta a la tabla 1
     const [results1] = await pool.query('SELECT * FROM registrarse WHERE email = ? AND password = ?', [email, password]);
+    console.log(results1)
     if (results1.length > 0) {
       // Usuario encontrado en tabla 1
-      return res.json({ isRegistrarse: true });
+      return res.json({ isRegistrarse: true,  nombre:results1[0].nombre });
     }
 
     // Si el usuario no está en la tabla 1, consulta la tabla 2
