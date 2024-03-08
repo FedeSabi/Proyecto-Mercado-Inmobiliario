@@ -97,7 +97,7 @@ const InmuebleFormPersona = () => {
    
 
 
-      const respuesta = await axios.post("https://inmobiliariaback.onrender.com/guardarInmueble", formData);
+      const respuesta = await axios.post("http://localhost:4000/guardarInmueble", formData);
       
       
       console.log("Respuesta del servidor:", respuesta.data);
