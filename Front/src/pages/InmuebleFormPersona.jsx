@@ -97,7 +97,7 @@ const InmuebleFormPersona = () => {
    
 
 
-      const respuesta = await axios.post("http://proyecto-mercado-inmobiliario-back.vercel.app/guardarInmueble", formData);
+      const respuesta = await axios.post("https://inmobiliariaback.onrender.com/guardarInmueble", formData);
       
       
       console.log("Respuesta del servidor:", respuesta.data);
