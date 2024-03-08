@@ -21,47 +21,59 @@ export const user_registrarse = async (req, res) => {
 
 // obtener todos los usuarios registrados en la base de datos
 export const get_registrarse = async (req, res) => {
-  try{
+  try {
     //establece la conexion con la base de datos
-    const connection = await pool.getConnection()
+    const connection = await pool.getConnection();
 
     //ejecuta la consulta SQL para seleccionar todos los usuarios
-    const [results, fields] = await connection.query("SELECT * FROM  registrarse")
+    const [results, fields] = await connection.query(
+      "SELECT * FROM  registrarse"
+    );
 
     //libera la conexion con la base de datos
-    connection.release()
+    connection.release();
 
     //devuelve los resultados obtenidos como respuesta al cliente en formato JSON
-    res.json(results)
-  } catch (error){
-    //maneja los errores en caso de que ocurran durante la ejecucion de la consulta 
-  console.error("error al obtener usuarios: ", error)
-  res.status(500).send("error interno del servidor")
-  }
-}
-
-//editar un usuario de la base de datos
-
-// Eliminar un usuario de la base de datos "registrarse"
-export const delete_registrarse = async (req, res) => {
-  const { id } = req.params;
-  try {
-    // Construye la consulta SQL para eliminar el usuario
-    const sql = `DELETE FROM registrarse WHERE id = ?`;
-    const values = [id];
-
-    // Ejecuta la consulta SQL
-    const [result] = await pool.query(sql, values);
-
-    // Verifica si el usuario fue eliminado correctamente
-    if (result.affectedRows > 0) {
-      res.json({ message: "Usuario eliminado exitosamente" });
-    } else {
-      // Si el usuario no se encontró, devuelve un mensaje de error
-      res.status(404).json({ message: "Usuario no encontrado" });
-    }
+    res.json(results);
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Error al eliminar el usuario" });
+    //maneja los errores en caso de que ocurran durante la ejecucion de la consulta
+    console.error("error al obtener usuarios: ", error);
+    res.status(500).send("error interno del servidor");
+  }
+};
+
+// editar un usuario de la base de datos
+export const delete_registrarse = async (req, res) => {
+  const { id } = req.params; // Obtener el id del usuario a eliminar desde los parámetros de la solicitud
+
+  // Verificar si el ID es undefined o nulo
+  if (!id) {
+    console.error('ID del usuario a eliminar no válido');
+    return res.status(400).send('ID del usuario a eliminar no válido');
+  }
+
+  try {
+    // Establecer la conexión con la base de datos
+    const connection = await pool.getConnection();
+
+    // Ejecutar la consulta SQL para eliminar el usuario con el id proporcionado
+    const [result] = await connection.query(
+      "DELETE FROM registrarse WHERE id = ?",
+      [id]
+    );
+    // Ejecutar la consulta SQL para seleccionar todos los usuarios actualizados
+    const [results, fields] = await connection.query(
+      "SELECT * FROM registrarse"
+    );
+
+    // Liberar la conexión con la base de datos
+    connection.release();
+
+    // Enviar una respuesta al cliente con la lista actualizada de usuarios
+    res.json(results);
+  } catch (error) {
+    // Manejar los errores en caso de que ocurran durante la ejecución de la consulta
+    console.error("Error al eliminar usuario:", error);
+    res.status(500).send("Error interno del servidor");
   }
 };
