@@ -3,14 +3,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
-const FormLogin = () => {
+const FormLogin = ({ setLoggedInUsername }) => {
   const navigate = useNavigate();
   const [login, setLogin] = useState({
     email: "",
     password: "",
   });
 
-  const [error, setError] = useState(null); // estado para el mensaje de error
+  const [error, setError] = useState(null); 
 
   const inputChange = (event) => {
     const { name, value } = event.target;
@@ -20,13 +20,16 @@ const FormLogin = () => {
     }));
   };
 
+
   const onSubmit = async (event) => {
     event.preventDefault();
     try {
       const response = await axios.post("http://localhost:4000/login", login);
+    
+      setLoggedInUsername(response.data.nombre);
       if (response && response.data) {
         if (response.data.isAdmin) {
-          navigate("/administrador"); // Redirige al componente Administrador
+          navigate("/administrador"); 
         } else if (response.data.isRegistrarse) {
           //navigate('/componente-registrarse');
           navigate("/UserPass") // Redirige a otro componente
@@ -160,8 +163,7 @@ const FormLogin = () => {
         <Link
           to={"/"}
           className="flex justify-center w-full inlineBlock rounded bg-orange-500 mt-[51px] mb-4 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0 4px 9px -4px #3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0 8px 9px -4px rgba(59,113,202,0.3),0 4px 18px 0 rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0 8px 9px -4px rgba(59,113,202,0.3),0 4px 18px 0 rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0 8px 9px -4px rgba(59,113,202,0.3),0 4px 18px 0 rgba(59,113,202,0.2)] dark:shadow-[0 4px 9px -4px rgba(59,113,202,0.5)] dark:hover:shadow-[0 8px 9px -4px rgba(59,113,202,0.2),0 4px 18px 0 rgba(59,113,202,0.1)] dark:focus:shadow-[0 8px 9px -4px rgba(59,113,202,0.2),0 4px 18px 0 rgba(59,113,202,0.1)] dark:active:shadow-[0 8px 9px -4px rgba(59,113,202,0.2),0 4px 18px 0 rgba(59,113,202,0.1)]"
-          data-te-ripple-init
-          data-te-ripple-color="light"
+       
         >
           Volver
         </Link>

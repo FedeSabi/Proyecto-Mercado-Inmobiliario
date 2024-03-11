@@ -6,7 +6,7 @@ import Home from "./pages/Home.jsx";
 import Footer from "./components/Footer.jsx";
 import CardsPropiedades from "./pages/CardsPropiedades.jsx";
 import FormUsuario from "./pages/FormUsuario.jsx";
-import InmuebleFormPersona from "./pages/InmuebleFormPersona.jsx";
+
 import FormBusquedaUser from "./pages/FormBusquedaUser.jsx";
 import { Navbar } from "./components/Navbar/Navbar.jsx";
 import { Inmuebles } from "./pages/Inmuebles.jsx";
@@ -20,28 +20,30 @@ import AdmCorredor from "./pages/AdmCorredor.jsx";
 import AdmConstructora from "./pages/AdmConstructora.jsx";
 import UserPass from "./pages/UserPass.jsx";
 import CorredorPass from "./pages/CorredorPass.jsx";
+import InmuebleFormPersona from "./pages/InmuebleFormPersona.jsx";
+import { useState } from "react";
 
 function App() {
-
+  const [loggedInUsername, setLoggedInUsername] = useState("");
   return (
     <>
       <Router>
-        <Navbar />
+      <Navbar loggedInUsername={loggedInUsername} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/"exact element={<Home />} />
           <Route path="/Inmuebles" element={<Inmuebles />} />
           <Route path="/DetalleInmuebles" element={<DetalleInmuebles />} />
-          <Route path="/FormLogin" element={<FormLogin />} />
+          <Route
+            path="/FormLogin"
+            element={<FormLogin setLoggedInUsername={setLoggedInUsername} />}
+          />
           <Route path="/FormUsuario" element={<FormUsuario />} />
           <Route path="/Contacto" element={<Contacto />} />
           <Route path="/FormCorretor" element={<FormCorretor />} />
           <Route path="/FormConstrutora" element={<FormConstrutora />} />
           <Route path="/Nosotros" element={<Nosotros />} />
           <Route path="/CardsPropiedades" element={<CardsPropiedades />} />
-          <Route
-            path="/InmuebleFormPersona"
-            element={<InmuebleFormPersona />}
-          />
+          <Route path="/InmuebleFormPersona" element={<InmuebleFormPersona />}/>
           <Route path="/Administrador" element={<Administrador />} />
           <Route path="/FormBusquedaUser" element={<FormBusquedaUser />} />
           <Route path="/AdmUsuario" element={<AdmUsuario />} />

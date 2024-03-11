@@ -7,6 +7,8 @@ import registrarse from "../routes/routes_registrarse.js"
 import corredor from "../routes/routes_corredor.js"
 import constructora from "../routes/routes_constructora.js"
 import login from "../routes/routes_login.js"
+import Form_User from "../routes/routes_From_User.js"
+
 
 const app = express();
 
@@ -24,6 +26,9 @@ app.use("/", constructora);
 
 //enrutador "login" en la ruta principal de la aplicacion
 app.use("/", login)
+
+app.use("/", Form_User)
+
 
 
 const puerto = PORT;
