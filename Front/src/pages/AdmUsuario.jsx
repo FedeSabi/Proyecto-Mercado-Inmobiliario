@@ -5,12 +5,43 @@ import { Link } from "react-router-dom";
 
 const AdmUsuario = () => {
   const [usuarios, setUsuarios] = useState([]);
+  const [nombreActualizar, setNombreActualizar] = useState("");
+  const [apellidoActualizar, setApellidoActualizar] = useState("");
+  const [emailActualizar, setEmailActualizar] = useState("");
+  const [telefonoActualizar, setTelefonoActualizar] = useState("");
+  const [idUsuarioActualizar, setIdUsuarioActualizar] = useState(null);
+  console.log(idUsuarioActualizar)
+  const [mostrarTabla, setMostrarTabla] = useState(true); //nuevo
 
-  //const [idRegistrarseEliminar, setIdRegistrarseEliminar] = useState(null)
-  //const [nombreActualizar, setNombreActualizar] = useState("");
-  //const [apellidoActualizar, setApellidoActualizar] = useState("");
-  //const [emailActualizar, setEmailActualizar] = useState("");
-  //const [telefonoActualizar, setTelefonoActualizar] = useState("");
+  //funcion para modificar un usuario de la base de datos
+const handleUpdateClick = async (id) =>{
+  console.log(handleUpdateClick)
+  try{
+    setIdUsuarioActualizar(id)
+
+    const updateUser = {
+      nombre: nombreActualizar,
+      apellido: apellidoActualizar,
+      email: emailActualizar,
+      telefono: telefonoActualizar,
+    }
+    await axios.put(`http://localhost:4000/registrarse/${idUsuarioActualizar}`,updateUser)
+
+    setIdUsuarioActualizar(null)
+    setMostrarTabla(true) // mostrar la tabla despues de actualizar
+    
+
+    setNombreActualizar("")
+    setApellidoActualizar("")
+    setEmailActualizar("")
+    setTelefonoActualizar("")
+  } catch (error){
+    console.error("Error al preparar o relaizar la actualizacion", error)
+  }
+}
+
+// tablas de actualizacion y mostrar / ocultar una tabla
+
 
   //funcion para obtener los datos de la base de datos
   useEffect(() => {
@@ -43,6 +74,7 @@ const AdmUsuario = () => {
 
   return (
     <div className="pt-[119px] pb-10 ">
+      {mostrarTabla && (
       <table className=" min-w-full border-collapse block md:table">
         <thead className="block md:table-header-group ">
           <tr className="border border-gray-500 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto md:relative ">
@@ -101,7 +133,11 @@ const AdmUsuario = () => {
                   Delete
                 </button>
 
-                <button className="ml-4 hover:bg-green-500 hover:text-white text-green-500 font-bold py-1 px-2 border border-green-500 rounded">
+                <button className="ml-4 hover:bg-green-500 hover:text-white text-green-500 font-bold py-1 px-2 border border-green-500 rounded"
+                onClick={() => {
+                  handleUpdateClick(usuario.id)
+                  setMostrarTabla(false) // ocultar la tabla al hacer click en modificar
+                }}>
                   Modificar
                 </button>
                 <Link to={"/FormUsuario"}>
@@ -114,6 +150,47 @@ const AdmUsuario = () => {
           ))}
         </tbody>
       </table>
+      )}
+      {!mostrarTabla && idUsuarioActualizar && (
+        <div className="flex-auto p-4">
+          <h2 className="mb-[26px] flex h-[40px] w-[150px] items-center justify-center rounded-lg bg-orange-500 text-white">Modificar Usuario</h2>
+          <form onSubmit={(e) =>{
+            e.preventDefault()
+            handleUpdateClick(idUsuarioActualizar)}}
+            className="flex flex-col">
+              <label className="mb-2">Nombre:</label>
+              <input className="h-7 w-1/5 rounded-lg border border-solid border-orange-500"
+              type="text"
+              defaultValue={nombreActualizar}
+              onChange={(e) =>  setNombreActualizar(e.target.value)}
+              />
+              <label className="mb-2">Apellido:</label>
+              <input className="h-7 w-1/5 rounded-lg border border-solid border-orange-500"
+              type="text"
+              defaultValue={apellidoActualizar}
+              onChange={(e) => setApellidoActualizar(e.target.value)}
+              />
+              <label className="mb-2">Email:</label>
+              <input className="h-7 w-1/5 rounded-lg border border-solid border-orange-500"
+              type="text"
+              defaultValue={emailActualizar}
+              onChange={(e) =>  setEmailActualizar(e.target.value)}
+              />
+              <label className="mb-2">Telefono:</label>
+              <input className="h-7 w-1/5 rounded-lg border border-solid border-orange-500"
+              type="text"
+              defaultValue={telefonoActualizar}
+              onChange={(e) =>  setTelefonoActualizar(e.target.value)}
+              />
+              <button
+                  className="mt-[10px] h-10 w-[20%] rounded-lg bg-orange-500 text-white"
+                  type="submit"
+                >
+                  Guardar cambios
+                </button>
+          </form>
+        </div>
+      )}
     </div>
   );
 };

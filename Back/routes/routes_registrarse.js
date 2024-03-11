@@ -1,11 +1,14 @@
 import express  from "express";
-import { delete_registrarse, user_registrarse, get_registrarse } from '../controllers/controller_registrarse.js'
+import { delete_registrarse, user_registrarse, get_registrarse, edit_registrarse } from '../controllers/controller_registrarse.js'
 
 
 const router = express.Router()
 
 // registro nuevo de usuario en BD
-router.post("/registrarse", user_registrarse)
+router.post('/registrarse', user_registrarse)
+
+// modificar usuario en BD
+router.put('/registrarse/:id', edit_registrarse)
 
 // delete de usuario en BD
 router.delete('/registrarse/:id', delete_registrarse);
