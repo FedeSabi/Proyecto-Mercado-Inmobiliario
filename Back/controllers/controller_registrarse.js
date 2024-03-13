@@ -41,22 +41,8 @@ export const get_registrarse = async (req, res) => {
     res.status(500).send("error interno del servidor");
   }
 };
-/*
-/// editar un usuario de la base de datos  ///
-export const edit_registrarse = async (req, res) => {
-try{
-  const { nombre, apellido, email, telefono, id } = req.body
-  const [item] = await user_registrarse(id)
-  if (!item) {
-    return res.status(200).json({ message: "No fue encontrado un usuario con este ID"})
-  }
-  await connection.execute(`UPDATE registrarse SET nombre = ?, apellido = ?, email = ?, telefono = ? WHERE registrarse_id = ?;`, [nombre, apellido, email, telefono, id])
-  return res.status(200).json(item)
-}catch (error) {
-  return res.status(200).json({ message: `Ocurrio un error: ${error.message}`})
-}
-}*/
 
+// TABLA DE MODIFICACION DE UN USUARIO //
 export const edit_registrarse = async (req, res) => {
   const { id } = req.params;
   const updateData = req.body;
