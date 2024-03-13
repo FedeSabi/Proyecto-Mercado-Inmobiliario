@@ -22,7 +22,7 @@ const [mostrarFormulario, setMostrarFormulario] = useState(true) //muestra y ocu
 useEffect(() => {
     const obtenerCorredores = async () => {
         try{
-            const response = await axios.get("/http://localhost:4000/corredor")
+            const response = await axios.get("http://localhost:4000/corredor")
             setCorredores(response.data)//establece los corredores en el estado 
         } catch (error) {
             console.error("error al obtener corredores", error)
@@ -53,7 +53,7 @@ useEffect(() => {
             <tbody className=" block md:table-row-group">
             {corredores.map((corredor) => 
                 <tr key={corredor.id} className="bg-gray-100 border border-grey-500 md:border-none block md:table-row">
-                    <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span className="inline-block w-1/3 md:hidden font-bold"></span>{corredor.Nombre_completo}</td>
+                    <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span className="inline-block w-1/3 md:hidden font-bold"></span>{corredor.nombre_completo}</td>
                     <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span className="inline-block w-1/3 md:hidden font-bold"></span>{corredor.email}</td>
                     <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span className="inline-block w-1/3 md:hidden font-bold"></span>{corredor.telefono}</td>
                     <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span className="inline-block w-1/3 md:hidden font-bold"></span>{corredor.direccion_web}</td>
@@ -64,9 +64,9 @@ useEffect(() => {
                     <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span className="inline-block w-1/3 md:hidden font-bold"></span>{corredor.descripcion}</td>
                     <td className="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                         <span className="inline-block w-1/3 md:hidden font-bold">Actions</span>
-                        <button className="ml-4 hover:bg-red-500 hover:text-white text-red-500 font-bold py-1 px-2 border border-red-500 rounded">Delete</button>
-                        <button className="ml-4 hover:bg-green-500 hover:text-white text-green-500 font-bold py-1 px-2 border border-green-500 rounded">Modificar</button>
-                        <button className="ml-4 hover:bg-gray-500 hover:text-white text-gray-500 font-bold py-1 px-2 border border-gray-500 rounded">Agregar</button>
+                        <button className="flex mb-2 justify-items-center hover:bg-red-500 hover:text-white text-red-500 font-bold py-1 px-1 border border-red-500 rounded">Delete</button>
+                        <button className="flex mb-2 hover:bg-green-500 hover:text-white text-green-500 font-bold py-1 px-1 border border-green-500 rounded">Modificar</button>
+                        <button className="flex hover:bg-gray-500 hover:text-white text-gray-500 font-bold py-1 px-1 border border-gray-500 rounded">Agregar</button>
                     </td>
                 </tr>
                )}
