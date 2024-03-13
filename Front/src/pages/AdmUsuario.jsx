@@ -10,7 +10,6 @@ const AdmUsuario = () => {
   const [emailActualizar, setEmailActualizar] = useState("");
   const [telefonoActualizar, setTelefonoActualizar] = useState("");
   const [idUsuarioActualizar, setIdUsuarioActualizar] = useState(null);
-  console.log(idUsuarioActualizar)
   const [mostrarTabla, setMostrarTabla] = useState(true); //nuevo
 
   //funcion para modificar un usuario de la base de datos
@@ -39,9 +38,6 @@ const handleUpdateClick = async (id) =>{
     console.error("Error al preparar o relaizar la actualizacion", error)
   }
 }
-
-// tablas de actualizacion y mostrar / ocultar una tabla
-
 
   //funcion para obtener los datos de la base de datos
   useEffect(() => {
@@ -132,7 +128,7 @@ const handleUpdateClick = async (id) =>{
                 >
                   Delete
                 </button>
-
+                {/* tablas de actualizacion y mostrar / ocultar una tabla */}
                 <button className="ml-4 hover:bg-green-500 hover:text-white text-green-500 font-bold py-1 px-2 border border-green-500 rounded"
                 onClick={() => {
                   handleUpdateClick(usuario.id)
@@ -152,32 +148,32 @@ const handleUpdateClick = async (id) =>{
       </table>
       )}
       {!mostrarTabla && idUsuarioActualizar && (
-        <div className="flex-auto p-4">
+        <div className="flex-col p-4 justify-center">
           <h2 className="mb-[26px] flex h-[40px] w-[150px] items-center justify-center rounded-lg bg-orange-500 text-white">Modificar Usuario</h2>
           <form onSubmit={(e) =>{
             e.preventDefault()
             handleUpdateClick(idUsuarioActualizar)}}
             className="flex flex-col">
               <label className="mb-2">Nombre:</label>
-              <input className="h-7 w-1/5 rounded-lg border border-solid border-orange-500"
+              <input className="h-7 w-1/5 rounded-lg border border-solid border-orange-500 focus:outline-none"
               type="text"
               defaultValue={nombreActualizar}
               onChange={(e) =>  setNombreActualizar(e.target.value)}
               />
               <label className="mb-2">Apellido:</label>
-              <input className="h-7 w-1/5 rounded-lg border border-solid border-orange-500"
+              <input className="h-7 w-1/5 rounded-lg border border-solid border-orange-500 focus:outline-none"
               type="text"
               defaultValue={apellidoActualizar}
               onChange={(e) => setApellidoActualizar(e.target.value)}
               />
               <label className="mb-2">Email:</label>
-              <input className="h-7 w-1/5 rounded-lg border border-solid border-orange-500"
+              <input className="h-7 w-1/5 rounded-lg border border-solid border-orange-500 focus:outline-none"
               type="text"
               defaultValue={emailActualizar}
               onChange={(e) =>  setEmailActualizar(e.target.value)}
               />
               <label className="mb-2">Telefono:</label>
-              <input className="h-7 w-1/5 rounded-lg border border-solid border-orange-500"
+              <input className="h-7 w-1/5 rounded-lg border border-solid border-orange-500 focus:outline-none"
               type="text"
               defaultValue={telefonoActualizar}
               onChange={(e) =>  setTelefonoActualizar(e.target.value)}
