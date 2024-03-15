@@ -71,7 +71,7 @@ const AdmCorredor = () => {
 
   //funcion para eliminar un corredor de la base de datos
   const eliminarCorredor = async (id) => {
-    console.log("Id del corredor a eliminar:", id) //verificar el valor de id
+    console.log("Id del corredor a eliminar: ", id) //verificar el valor de id
     if (!id) {
       console.error("ID del corredor es undefined")
       return
